@@ -1,0 +1,192 @@
+
+//六大產業圖片區
+#photoNews {
+  // max-width: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+//六大產業圖片區卡片
+.image-card {
+  position: relative;
+  overflow: hidden;
+
+}
+
+//六大產業圖片區卡片內容
+.image-content {
+  position: relative;
+}
+
+.image-content img {
+
+  width: 100%;
+  height: 100%;
+}
+
+.image-card:hover .image-content img {
+  transform: scale(1.1); /* 滑鼠觸碰圖片放大效果 */
+}
+//六大產業圖片區卡片文字
+.image-title {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  padding: 5px;
+  z-index: 1;
+}
+//產業介紹文字區
+.section01 {
+width: 100%;
+padding: 45px 0;
+display: flex;
+justify-content: center;
+align-items: center;
+.container{
+  width: 100%;
+  /* height:500px; */
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 2;
+  h2 {
+  font-size: 30px;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  }
+  }
+.section01-text{
+  p{
+    font-size: 20px;
+    margin: 0 20%;
+    @media(max-width: 768px){
+      margin: 10px;
+    }
+  }
+
+}
+
+}
+//紅色線條
+hr {
+height: 3px;
+width: 430px;
+display: inline-block;
+padding: 0;
+border: none;
+@media (max-width:568px){
+  width: 330px;
+}
+}
+.hr-red {
+background: red;
+}
+
+
+//最新消息輪播圖區
+.readContainer{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+  .carousel {
+    position: relative;
+    text-align: left;
+    box-sizing: border-box;
+    touch-action: pan-y;
+    overscroll-behavior: none;
+  }
+  h4{
+    width: 100%;
+/* height:500px; */
+padding: 0 15px;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+z-index: 2;}
+img{
+  height:300px
+}
+h2 {
+font-size: 30px;
+text-align: center;
+line-height: 1.5;
+letter-spacing: 0.08em;
+font-weight: 500;
+}
+}
+
+.readCard{
+  margin: 20px;
+  max-width: 380px;
+  @media (max-width: 768px) {
+    margin: 5px 20px;
+  }
+}
+
+.hr-solid-content {
+  color: #f30909;
+  border: 0;
+  font-size: 5px;
+  padding: 1em 0;
+  position: relative;
+}
+.hr-solid-content::before {
+  content: attr(data-content);
+  position: absolute;
+  padding: 0 1ch;
+  line-height: 1px;
+  border: solid #f00622;
+  border-width: 0 8vw;
+  width: fit-content;
+  /* for 不支持fit-content浏览器 */
+  white-space: nowrap;
+  left: 40%;
+  transform: translateX(-50%);
+  @media (max-width :568px){
+    left: 50%;
+  }
+}
+.indexParallax{
+  padding-top: 0;
+  height: 700px;
+  .custom-caption{
+    margin-top: 10%;
+   top: 10%;
+   margin-right:10%;
+   .customLogo{
+    img{
+      width: 350px;
+      margin-right:5% ;
+    }
+   }
+   .customText{
+    font-size: 53px;
+   }
+   .customText2{
+    font-size: 45px;
+   }
+  }
+  @media (max-width: 768px) {
+    height: 500px;
+    .custom-caption{
+      margin-top: 10%;
+     top: 25%;
+     margin-right:11%;
+
+    }
+  }
+}
+.recruit{
+  @media(max-width: 768px){
+    img{width: 100%;}
+  }
+}
+

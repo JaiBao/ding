@@ -1,0 +1,79 @@
+@import "@/css/scss/Index.scss";
+@import "@/css/scss/overview.scss";
+// app global css in SCSS form
+// body{
+//   @media (max-width:568) {
+//     overflow-x: hidden;
+//   }
+// }
+// 標題區紅色底線
+.q-header {
+  border-bottom: 2px solid red;
+}
+
+// 隱藏下拉箭頭
+.q-tabs{
+  .q-icon, .material-icons, .material-icons-outlined, .material-icons-round, .material-icons-sharp, .material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp {
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: inherit;
+  font-size: inherit;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+}
+//tabs觸碰紅色
+.q-tabs{
+  .q-btn-dropdown:hover {
+  background-color: #e60012 !important;
+  color: white !important;
+}}
+.dropdown-hovered {
+  background-color: #e60012 !important;
+  color: white !important;
+}
+.dropdown-hovered2 {
+  background-color: #e60012 !important;
+  color: white !important;
+}
+.q-card {
+  box-shadow: none;
+  // border-radius: 4px;
+  // vertical-align: top;
+  // background: #fff;
+  // position: relative;
+}
+//timeline左側
+.q-timeline__subtitle{
+
+    width: 23%;
+
+
+
+  span{
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+  }
+  @media (max-width: 768px) {
+    span{
+      font-size: 18px;
+    }
+  }
+}
+//timeline右側文字
+.q-timeline__content{
+  width: 100%;
+  @media(max-width: 768px){
+    font-size: 5px;
+  }
+}
+
+.q-timeline--comfortable .q-timeline__subtitle {
+  width: 23%;
+  @media(min-width: 768px){
+    width: 19%;
+  }
+}
