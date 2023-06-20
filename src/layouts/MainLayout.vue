@@ -353,7 +353,7 @@ li {
 .titleLogo{
   display: flex;margin-left: 5%; align-items: center;
   img{
-    width: 300px;
+    width: 250px;
   }
   .titleBtn{
     margin-left: 7%;
@@ -362,12 +362,16 @@ li {
       }
   }
   @media (min-width: 1120px){
+    img{
+    width: 300px;
+  }
     .titleBtn{
     margin-left: 8%;
         .titleBtns{
-        font-size: 17px;
+        font-size: 20px;
       }
   }
+
   }
 }
 .drawerBtns{
