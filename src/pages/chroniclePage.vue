@@ -1,13 +1,13 @@
 <template>
 
-  <div class="q-pa-lg">
+  <div >
 <!-- 大圖視差 -->
 
 <div class="q-pa-xs full-width " >
 <q-parallax
-  src="~assets/overView/viewPic.jpg"
+  src="~assets/chronicle/chr01.jpg"
 >
-<div class="absolute-left-center custom-caption2">
+<div class=" absolute-left-center custom-caption2">
 
         <div class="text-black text-h2 alight-center" >集團紀事</div>
       <div class="text-grey text-h5 alight-center" >Enterprise history</div>
@@ -15,7 +15,7 @@
 </q-parallax>
 </div>
 <!-- 時間軸 -->
-    <q-timeline  layout="comfortable" side="right" >
+    <q-timeline  layout="comfortable" side="right"  class="q-pa-md">
       <!-- <q-timeline-entry heading>Timeline heading</q-timeline-entry> -->
 
       <q-timeline-entry
@@ -27,8 +27,8 @@
         class="chronicleTimeline"
       >
         <li   v-for="(text, index) in chronicle.texts" :key="index"><i class="fa-sharp fa-solid fa-circle"></i> {{text.time}}  {{text.text}}</li>
-
-<img :src="chronicle.image" >
+<br>
+<img v-if="chronicle.image" :src="chronicle.image" >
 <hr class="chronicleHr">
       </q-timeline-entry>
 
@@ -42,7 +42,7 @@ const chronicles = ref([
   {
     icon: 'turned_in',
     year: '2023年',
-    image: '/indexpic/read1.jpg',
+    image: '/indexpic/cir02.jpg',
     texts: [
       {
         time: '05/15',
@@ -59,7 +59,7 @@ const chronicles = ref([
   {
     icon: 'turned_in',
     year: '2022年',
-    image: '/indexpic/read1.jpg',
+    image: '/indexpic/cir03.jpg',
     texts: [
       {
         time: '10/17',
@@ -192,7 +192,13 @@ const chronicles = ref([
     justify-content: center;
     align-content: center;
   }
-  @media (min-width: 568px){
+  @media (min-width: 768px){
+    img{
+      width: 50%;
+      height: 200px;
+    }
+  }
+  @media (min-width: 996px){
     img{
       width: 50%;
       height: 400px;

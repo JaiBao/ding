@@ -16,7 +16,7 @@
             <q-item clickable to="/overView">
               <q-item-section>集團概述</q-item-section>
             </q-item>
-            <q-item clickable @click="tab = '集團事紀'">
+            <q-item clickable to="/chronicle">
               <q-item-section>集團事紀</q-item-section>
             </q-item>
             <q-item clickable @click="tab = '願景與宗旨'">
@@ -77,7 +77,7 @@
             <q-item clickable to="/overView">
               <q-item-section>集團概述</q-item-section>
             </q-item>
-            <q-item clickable @click="tab = '集團事紀'">
+            <q-item clickable to="/chronicle">
               <q-item-section>集團事紀</q-item-section>
             </q-item>
             <q-item clickable @click="tab = '願景與宗旨'">
@@ -135,7 +135,7 @@
                 <h5>關於鼎泰勝</h5>
                 <ul>
                   <li><router-link to="/overView">集團概述</router-link></li>
-                    <li><a href="#">集團事紀</a></li>
+                    <li><router-link to="/chronicle">集團事紀</router-link></li>
                     <li><a href="#">願景與宗旨</a></li>
                 </ul>
             </div>

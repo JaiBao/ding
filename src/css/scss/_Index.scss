@@ -161,6 +161,7 @@ font-weight: 500;
     margin-top: 10%;
    top: 10%;
    margin-right:10%;
+
    .customLogo{
     img{
       width: 350px;
@@ -172,6 +173,21 @@ font-weight: 500;
    }
    .customText2{
     font-size: 45px;
+   }
+   @media (max-width:568px){
+    margin-right:7%;
+    .customLogo{
+      img{
+        width: 300px;
+        margin-right:5% ;
+      }
+     }
+     .customText{
+      font-size: 40px;
+     }
+     .customText2{
+      font-size: 35px;
+     }
    }
   }
   @media (max-width: 768px) {
