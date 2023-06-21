@@ -85,7 +85,7 @@
     </div>
     <!-- 6大產業圖片展示 -->
   <!-- 清單圖片 -->
-  <div id="overViewPhotoNews" style="margin-bottom: 8%;">
+  <div id="overViewPhotoNews">
     <div class="row">
     <!-- 1 -->
     <q-card class="news col-md-4 col-sm-6 image-card">
@@ -94,7 +94,7 @@
         Drinking Water Business
       </p>
       <div class="image-content">
-        <img src="~assets/indexpic/industry5.jpg" alt="飲用水事業" style="width: 100%;height:100%;">
+        <img src="~assets/indexpic/industry5.jpg" alt="飲用水事業" >
       </div>
     </q-card>
 
@@ -104,7 +104,7 @@
         Catering Business
       </p>
       <div class="image-content">
-        <img src="~assets/indexpic/industry2.jpg" alt="餐飲事業" style="width: 100%;height:100%;">
+        <img src="~assets/indexpic/industry2.jpg" alt="餐飲事業" s>
       </div>
     </q-card>
       <!-- 3 -->
@@ -114,7 +114,7 @@
           Wine And Water Business
         </p>
         <div class="image-content">
-            <img src="~assets/indexpic/industry3.jpg" alt="水酒事業" style="width: 100%;height:100%;">
+            <img src="~assets/indexpic/industry3.jpg" alt="水酒事業" >
         </div>
       </q-card>
       <!-- 4 -->
@@ -124,7 +124,7 @@
           Biotechnology Business
         </p>
         <div class="image-content">
-            <img src="~assets/indexpic/industry4.jpg" alt="生技事業" style="width: 100%;height:100%;">
+            <img src="~assets/indexpic/industry4.jpg" alt="生技事業" >
         </div>
       </q-card>
       <!-- 5 -->
@@ -134,7 +134,7 @@
           Media Studio
         </p>
         <div class="image-content">
-            <img src="~assets/indexpic/industry5.jpg" alt="影視事業" style="width: 100%;height:100%;">
+            <img src="~assets/indexpic/industry5.jpg" alt="影視事業" >
         </div>
       </q-card>
       <!-- 6 -->
@@ -144,7 +144,7 @@
           Decoration Engineering Business
         </p>
         <div class="image-content">
-            <img src="~assets/indexpic/industry2.jpg" alt="裝修工程事業" style="width: 100%;height:100%;">
+            <img src="~assets/indexpic/industry2.jpg" alt="裝修工程事業" >
         </div>
       </q-card>
     </div>

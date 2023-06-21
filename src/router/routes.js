@@ -31,6 +31,15 @@ const routes = [
           login: false,
           admin: false
         }
+      },
+      {
+        path: '/vision',
+        component: () => import('src/pages/visionPage.vue'),
+        meta: {
+          title: '願景',
+          login: false,
+          admin: false
+        }
       }
     ]
   },

@@ -1,6 +1,4 @@
 <template>
-
-  <div >
 <!-- 大圖視差 -->
 
 <div class="q-pa-xs full-width " >
@@ -23,26 +21,26 @@
         :subtitle="chronicle.year"
         side="left"
         :icon="chronicle.icon"
-        color="red"
+        color="black"
         class="chronicleTimeline"
       >
-        <li   v-for="(text, index) in chronicle.texts" :key="index"><i class="fa-sharp fa-solid fa-circle"></i> {{text.time}}  {{text.text}}</li>
-<br>
-<img v-if="chronicle.image" :src="chronicle.image" >
+        <li  data-aos="fade-left" data-aos-duration="2000"  v-for="(text, index) in chronicle.texts" :key="index"><i class="fa-sharp fa-solid fa-circle"></i> {{text.time}}  {{text.text}}<img v-if="text.image" :src="text.image"></li>
+        <!-- <div v-for="(text, index) in chronicle.texts" :key="`img-${index}`">
+
+        </div> -->
 <hr class="chronicleHr">
       </q-timeline-entry>
 
     </q-timeline>
-  </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 const chronicles = ref([
   {
-    icon: 'turned_in',
+    icon: 'fa-solid fa-diamond',
     year: '2023年',
-    image: '/indexpic/cir02.jpg',
+
     texts: [
       {
         time: '05/15',
@@ -52,21 +50,23 @@ const chronicles = ref([
         text: '飲用水事業 | 森淋泉生技飲用水設備全面化升級、熱銷水產品新裝登場'
       }, {
         time: '04/01',
-        text: '飲用水事業 | 水泉水生技公司正式成立，全省經銷服務啟動'
+        text: '飲用水事業 | 水泉水生技公司正式成立，全省經銷服務啟動',
+        image: '/indexpic/cir02.jpg'
       }
     ]
   },
   {
-    icon: 'turned_in',
+    icon: 'fa-solid fa-diamond',
     year: '2022年',
-    image: '/indexpic/cir03.jpg',
     texts: [
       {
         time: '10/17',
-        text: '集團總部 | 鼎泰勝集團總部喬遷，進駐群光大樓'
+        text: '集團總部 | 鼎泰勝集團總部喬遷，進駐群光大樓',
+        image: '/indexpic/cir03.jpg'
       }, {
         time: '',
-        text: '餐飲事業 | 少小白榮獲「2021 第十一屆亞太優質餐飲連鎖品牌獎」'
+        text: '餐飲事業 | 少小白榮獲「2021 第十一屆亞太優質餐飲連鎖品牌獎」',
+        image: '/indexpic/cir04.jpg'
       }, {
         time: '',
         text: '裝修工程事業 | 家荷工程 正式成立'
@@ -74,13 +74,13 @@ const chronicles = ref([
     ]
   },
   {
-    icon: 'turned_in',
+    icon: 'fa-solid fa-diamond',
     year: '2021年',
-    image: '',
     texts: [
       {
         time: '',
-        text: '飲用水事業 | 森淋泉生技加入，飲用水全省通路上架'
+        text: '飲用水事業 | 森淋泉生技加入，飲用水全省通路上架',
+        image: '/indexpic/cir03.jpg'
       }, {
         time: '',
         text: '餐飲事業 | 創立迷港家叉燒舖品牌'
@@ -91,9 +91,8 @@ const chronicles = ref([
     ]
   },
   {
-    icon: 'turned_in',
+    icon: 'fa-solid fa-diamond',
     year: '2020年',
-    image: '',
     texts: [
       {
         time: '',
@@ -103,14 +102,14 @@ const chronicles = ref([
         text: '餐飲事業 | 創立太ONE牛肉麵'
       }, {
         time: '',
-        text: '影視事業 | 福汎國際正式成立'
+        text: '影視事業 | 福汎國際正式成立',
+        image: '/indexpic/cir06.jpg'
       }
     ]
   },
   {
-    icon: 'turned_in',
+    icon: 'fa-solid fa-diamond',
     year: '2018年',
-    image: '',
     texts: [
       {
         time: '',
@@ -119,9 +118,8 @@ const chronicles = ref([
     ]
   },
   {
-    icon: 'turned_in',
+    icon: 'fa-solid fa-diamond',
     year: '2013年',
-    image: '',
     texts: [
       {
         time: '',
@@ -130,9 +128,8 @@ const chronicles = ref([
     ]
   },
   {
-    icon: 'turned_in',
+    icon: 'fa-solid fa-diamond',
     year: '2010年',
-    image: '',
     texts: [
       {
         time: '',
@@ -141,9 +138,8 @@ const chronicles = ref([
     ]
   },
   {
-    icon: 'turned_in',
+    icon: 'fa-solid fa-diamond',
     year: '2008年',
-    image: '',
     texts: [
       {
         time: '',
@@ -155,9 +151,8 @@ const chronicles = ref([
     ]
   },
   {
-    icon: 'turned_in',
+    icon: 'fa-solid fa-diamond',
     year: '2003年',
-    image: '',
     texts: [
       {
         time: '',
@@ -166,9 +161,8 @@ const chronicles = ref([
     ]
   },
   {
-    icon: 'turned_in',
+    icon: 'fa-solid fa-diamond',
     year: '1987年',
-    image: '',
     texts: [
       {
         time: '',
@@ -184,36 +178,5 @@ const chronicles = ref([
 
 </script>
 <style lang="scss" scoped>
-.chronicleTimeline{
-  img{
-    width: 70%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-  }
-  @media (min-width: 768px){
-    img{
-      width: 50%;
-      height: 200px;
-    }
-  }
-  @media (min-width: 996px){
-    img{
-      width: 50%;
-      height: 400px;
-    }
-  }
-}
-.chronicleHr {
-background: red;
-height: 2px;
-width: 100%;
-display: inline-block;
-margin: 20px 0;
-@media (min-width: 568px){
-  width: 80%;
-}
-}
 
 </style>

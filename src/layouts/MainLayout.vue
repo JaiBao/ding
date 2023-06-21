@@ -19,7 +19,7 @@
             <q-item clickable to="/chronicle">
               <q-item-section>集團事紀</q-item-section>
             </q-item>
-            <q-item clickable @click="tab = '願景與宗旨'">
+            <q-item clickable to="/vision">
               <q-item-section>願景與宗旨</q-item-section>
             </q-item>
           </q-list>
@@ -80,7 +80,7 @@
             <q-item clickable to="/chronicle">
               <q-item-section>集團事紀</q-item-section>
             </q-item>
-            <q-item clickable @click="tab = '願景與宗旨'">
+            <q-item clickable to="/vision">
               <q-item-section>願景與宗旨</q-item-section>
             </q-item>
           </q-list>
@@ -136,7 +136,7 @@
                 <ul>
                   <li><router-link to="/overView">集團概述</router-link></li>
                     <li><router-link to="/chronicle">集團事紀</router-link></li>
-                    <li><a href="#">願景與宗旨</a></li>
+                    <li><router-link to="/vision">願景與宗旨</router-link></li>
                 </ul>
             </div>
             <div class="contactUs col-12 col-md-3 col-sm-6">
@@ -361,18 +361,31 @@ li {
         font-size: 20px;
       }
   }
-  @media (min-width: 1120px){
+@media (max-width: 1227px){
     img{
-    width: 300px;
+    width: 200px;
   }
     .titleBtn{
-    margin-left: 8%;
+    margin-left: 2%;
         .titleBtns{
         font-size: 20px;
       }
   }
 
   }
+@media (max-width: 1113px){
+    img{
+    width: 200px;
+  }
+    .titleBtn{
+    margin-left: 2%;
+        .titleBtns{
+        font-size: 16px;
+      }
+  }
+
+  }
+
 }
 .drawerBtns{
   font-size: 20px;

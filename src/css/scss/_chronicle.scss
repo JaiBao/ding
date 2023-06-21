@@ -1,0 +1,35 @@
+.chronicleTimeline{
+  li{
+    margin:20px;
+  }
+  img{
+    margin-top:20px ;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
+  @media (min-width: 768px){
+    img{
+      width: 50%;
+      height: 200px;
+    }
+  }
+  @media (min-width: 996px){
+    img{
+      width: 50%;
+      height: 400px;
+    }
+  }
+}
+.chronicleHr {
+background: #e60012;
+height: 2px;
+width: 100%;
+display: inline-block;
+margin: 20px 0;
+@media (min-width: 568px){
+  width: 80%;
+}
+}
