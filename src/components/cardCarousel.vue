@@ -49,18 +49,22 @@ const settings = ref({
 const breakpoints = ref({
   576: {
     itemsToShow: 1,
-    snapAlign: 'center'
+    snapAlign: 'left'
   },
   768: {
-    itemsToShow: 1.5,
-    snapAlign: 'center'
+    itemsToShow: 2,
+    snapAlign: 'left'
   },
   992: {
-    itemsToShow: 2.5,
-    snapAlign: 'center'
+    itemsToShow: 2,
+    snapAlign: 'left'
   },
   1200: {
-    itemsToShow: 3.5,
+    itemsToShow: 3,
+    snapAlign: 'center'
+  },
+  1920: {
+    itemsToShow: 4,
     snapAlign: 'left'
   }
 })
