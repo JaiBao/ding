@@ -207,30 +207,42 @@ const dropdownVisible = ref(false)
 const dropdownHovered2 = ref(false)
 const dropdownVisible2 = ref(false)
 const rightDrawerOpen = ref(false)
+let closeDropdownTimeout = null
 const toggleRightDrawer = () => {
   rightDrawerOpen.value = !rightDrawerOpen.value
 }
 function openDropdown () {
+  if (closeDropdownTimeout) clearTimeout(closeDropdownTimeout)
   dropdownVisible.value = true
 }
+
+function closeDropdown () {
+  closeDropdownTimeout = setTimeout(() => {
+    dropdownVisible.value = false
+    dropdownHovered.value = false
+  }, 200) // 延遲 200 毫秒
+}
+
 function keepDropdownOpen () {
+  if (closeDropdownTimeout) clearTimeout(closeDropdownTimeout)
   dropdownVisible.value = true
   dropdownHovered.value = true
 }
-function closeDropdown () {
-  dropdownVisible.value = false
-  dropdownHovered.value = false
-}
+
 function openDropdown2 () {
+  if (closeDropdownTimeout) clearTimeout(closeDropdownTimeout)
   dropdownVisible2.value = true
 }
 function keepDropdownOpen2 () {
+  if (closeDropdownTimeout) clearTimeout(closeDropdownTimeout)
   dropdownVisible2.value = true
   dropdownHovered2.value = true
 }
 function closeDropdown2 () {
-  dropdownVisible2.value = false
-  dropdownHovered2.value = false
+  closeDropdownTimeout = setTimeout(() => {
+    dropdownVisible2.value = false
+    dropdownHovered2.value = false
+  }, 200) // 延遲 200 毫秒
 }
 
 </script>
@@ -356,10 +368,22 @@ li {
     width: 250px;
   }
   .titleBtn{
-    margin-left: 7%;
+    margin-left: 20%;
         .titleBtns{
         font-size: 20px;
       }
+  }
+  @media (max-width: 1440px){
+    img{
+    width: 250px;
+  }
+    .titleBtn{
+    margin-left: 9%;
+        .titleBtns{
+        font-size: 20px;
+      }
+  }
+
   }
 @media (max-width: 1227px){
     img{
