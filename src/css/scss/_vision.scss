@@ -131,4 +131,9 @@
     max-width: 470px;
     margin: 20px;
   }
+  @media(max-width: 768px){
+    img{
+      max-width: 100%;
+    }
+  }
 }

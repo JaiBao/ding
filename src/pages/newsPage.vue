@@ -1,0 +1,225 @@
+<template>
+  <q-page>
+    <!-- 大圖視差 -->
+
+<div class="q-pa-xs full-width " >
+<q-parallax
+  src="~assets/overView/viewPic.jpg"
+>
+<div class="absolute-left-center custom-caption2">
+
+        <div class="text-black text-h2 alight-center" >最新消息</div>
+      <div class="text-grey text-h5 alight-center" >News</div>
+    </div>
+</q-parallax>
+</div>
+<!-- table區 -->
+<div class="row justify-center">
+  <div class="q-pa-md row justify-end newsSearch">
+    <q-select v-model="selectedTime" :options="times"  clearable
+    @clear="selectedTime = defaultTime"
+    option-label="label"
+    rounded outlined
+    bg-color="grey-4"
+    >
+    <template v-slot:clear-icon>
+    <q-icon name="clear" size="18px" color="red" />
+  </template>
+    </q-select>
+    <q-select  rounded outlined v-model="selectedBusiness" :options="businessTypes"  clearable
+    @clear="selectedBusiness = '事業體選擇'"
+    bg-color="grey-4"/>
+    <q-input  rounded  outlined v-model="searchKeyword" label="搜索" bg-color="grey-4">
+    <template v-slot:append>
+    <q-icon name="search" class="search-icon" />
+  </template>
+    </q-input>
+    </div>
+
+    <div v-for="card in currentPageCards" :key="card.id" class="q-ma-md row justify-center">
+      <q-card class="newsPageCard">
+        <q-card-section class="row gutter-xs q-gutter-xl" horizontal>
+            <img :src="card.image" class="col-3 newsPageImg" >
+            <div class="col-8 newsPageText">
+              <div class="newsTime">{{ card.time }}</div>
+              <div class="newsTitle">{{ card.businessType }}|{{ card.title }} </div>
+              <div class="newsContent">{{ card.content }}</div>
+              <div class="row justify-end items-end align-end">
+                <q-btn
+                rounded
+                class="newsPageBtn q-ma-md">more...</q-btn>
+              </div>
+            </div>
+        </q-card-section>
+        <hr class="hr-news">
+      </q-card>
+    </div>
+  </div>
+  <q-pagination v-model="currentPage" :max="totalPages" class="row justify-center q-ma-md" :input="true"  />
+  </q-page>
+</template>
+<script setup>
+import { ref, computed } from 'vue'
+function generateTimeRange (startMonth, endMonth) {
+  const startDate = new Date(startMonth)
+  const endDate = new Date(endMonth)
+
+  const times = []
+  let currentMonth = startDate
+  while (currentMonth <= endDate) {
+    const start = formatDate(currentMonth)
+    const nextMonth = new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 1, 1)
+    const end = formatDate(new Date(Math.min(nextMonth, endDate)))
+    const label = getLabel(start, end)
+    times.push({ start, end, label })
+    currentMonth = nextMonth
+  }
+
+  return times
+}
+
+function formatDate (date) {
+  const year = date.getFullYear()
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const day = String(date.getDate()).padStart(2, '0')
+  return `${year}/${month}/${day}`
+}
+
+function getLabel (start, end) {
+  const startYear = new Date(start).getFullYear()
+  const startMonth = new Date(start).getMonth() + 1
+
+  return `${startYear}年 ${startMonth}月`
+}
+
+const times = generateTimeRange('2023/01/01', '2025/12/31')
+// console.log(times)
+const businessTypes = ['餐飲事業', '生技事業', '餐飲事業', '影視事業', '水酒事業', '裝修工程事業']
+
+const defaultTime = { start: null, end: null, label: '時間選擇' }
+const selectedTime = ref(defaultTime)
+const selectedBusiness = ref('事業體選擇')
+const searchKeyword = ref('')
+const cardsPerPage = 3
+const currentPage = ref(1)
+
+const cards = ref([
+  {
+    id: 1,
+    image: '/indexpic/industry2.jpg',
+    time: '2023/05/15',
+    title: '香臨食品南部分公司成立',
+    businessType: '餐飲事業',
+    content: '鼎泰勝集團旗下香臨食品，正式成立南部分公司，專營水酒事業營運與門市銷售。新南部分公司坐落於高雄，地點選擇鄰近高雄巨蛋捷運站，提供熱情的南台灣鄉親好友們有別於餐飲服務外酒水業務'
+  },
+  {
+    id: 2,
+    image: '/indexpic/industry2.jpg',
+    time: '2023/04/20',
+    title: '森淋泉生技飲用水設備全面化升級、熱銷水產品新裝登場',
+    businessType: '飲用水事業',
+    content: '鼎泰勝集團旗下森淋泉生技為提升2023年度生產量目標，今年特購全新機台進行汰舊換新作業，全新飲用水設備預期將提高生產品質，同時提高供作業產能，將產能發揮到最大！此外熱銷瓶裝水產品，也在本月份新登場。'
+  },
+  {
+    id: 3,
+    image: '/indexpic/industry2.jpg',
+    time: '2022/10/17',
+    title: ' 鼎泰勝集團總部喬遷，進駐群光大樓',
+    businessType: '集團總部 ',
+    content: '鼎泰勝集團旗總部團隊擴編，同時因應未來市場的擴充需求，於本2022年10月7日正式進駐群光大樓。總部辦公室全面整合各事業體的後勤團隊，將集團部門團隊整合，讓夥伴們更能團結一致，創造總部團隊價值！'
+  },
+  {
+    id: 4,
+    image: '/indexpic/industry2.jpg',
+    time: '2023/08/15',
+    title: '香臨2323232',
+    businessType: '餐飲事業',
+    content: '内容2'
+  },
+  {
+    id: 5,
+    image: '/indexpic/industry2.jpg',
+    time: '2023/09/15',
+    title: '標題3',
+    businessType: '類型3',
+    content: '内容3'
+  },
+  {
+    id: 6,
+    image: '/indexpic/industry2.jpg',
+    time: '2023/04/20',
+    title: '森淋泉生技飲用水設備全面化升級、熱銷水產品新裝登場',
+    businessType: '飲用水事業',
+    content: '内容2'
+  }
+])
+
+const filteredCards = computed(() => {
+  return cards.value.filter(card => {
+    const cardTime = new Date(card.time)
+    const timeStart = new Date(selectedTime.value.start)
+    const timeEnd = new Date(selectedTime.value.end)
+    return (
+      (selectedTime.value.label === '時間選擇' || (cardTime >= timeStart && cardTime <= timeEnd)) &&
+      (selectedBusiness.value === '事業體選擇' || card.businessType === selectedBusiness.value) &&
+      (!searchKeyword.value || card.title.includes(searchKeyword.value))
+    )
+  })
+})
+
+const totalPages = computed(() => Math.ceil(filteredCards.value.length / cardsPerPage))
+
+const currentPageCards = computed(() => {
+  const start = (currentPage.value - 1) * cardsPerPage
+  const end = start + cardsPerPage
+  return filteredCards.value.slice(start, end)
+})
+</script>
+<style lang="scss" scoped>
+.newsPageCard{
+  width: 60vw;
+  // min-width: 983.5px;
+  // box-shadow: 0 0  5px  #e60012;
+
+}
+.hr-news {
+  height: 1px;
+width: 100%;
+display: inline-block;
+padding: 0;
+border: none;
+background: #e60012;
+@media (max-width:568px){
+  width: 330px;
+}
+
+}
+.newsTime{
+  color: #e60012;
+  margin: 10px;
+  font-size: 20px;
+}
+.newsTitle{
+  font-size: 30px;
+  font-weight: 50;
+  margin: 10px;
+}
+.newsContent{
+  color: #bdbdbd;
+  font-size: 15px;
+  margin: 10px;
+}
+.newsSearch{
+  margin: 10px;
+ width: 50%;
+
+}
+.custom-clearable .q-field__icon-container {
+  font-size: 13px; /* 调整清除图标的大小 */
+  color: #e60012; /* 调整清除图标的颜色 */
+}
+.newsPageBtn{
+  color: #ffffff;
+  background-color: #e60012;
+}
+</style>

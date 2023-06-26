@@ -54,12 +54,15 @@ align-items: center;
   justify-content: flex-start;
   align-items: center;
   z-index: 2;
-  h2 {
+  h4 {
   font-size: 30px;
   text-align: center;
   line-height: 1.5;
   letter-spacing: 0.08em;
   font-weight: 500;
+  @media (max-width:568px){
+    font-size: 25px;
+  }
   }
   }
 .section01-text{
@@ -134,7 +137,7 @@ font-weight: 500;
 .hr-solid-content {
   color: #e60012;
   border: 0;
-  font-size: 5px;
+  font-size: 20px;
   padding: 1em 0;
   position: relative;
 }

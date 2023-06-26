@@ -40,6 +40,15 @@ const routes = [
           login: false,
           admin: false
         }
+      },
+      {
+        path: '/news',
+        component: () => import('src/pages/newsPage.vue'),
+        meta: {
+          title: '最新消息',
+          login: false,
+          admin: false
+        }
       }
     ]
   },

@@ -64,55 +64,82 @@
       <q-tabs vertical align="left" >
         <div class="column">
 
-        <q-btn-dropdown
+          <q-btn
         class="q-my-md drawerBtns"
-        menu-self="top left"
-        auto-close stretch flat label="關於鼎泰勝"  @mouseenter="openDropdown"
-  @mouseleave="closeDropdown"
-  v-model="dropdownVisible"  :class="{ 'dropdown-hovered': dropdownHovered || dropdownVisible }"
-  >
-          <q-list class="lt-md drawerBtns"
-          align="left"
-          @mouseenter="keepDropdownOpen" @mouseleave="closeDropdown">
-            <q-item clickable to="/overView">
-              <q-item-section>集團概述</q-item-section>
-            </q-item>
-            <q-item clickable to="/chronicle">
-              <q-item-section>集團事紀</q-item-section>
-            </q-item>
-            <q-item clickable to="/vision">
-              <q-item-section>願景與宗旨</q-item-section>
-            </q-item>
-          </q-list>
-        </q-btn-dropdown>
-        <q-btn-dropdown
-        class="q-my-md drawerBtns" to="/page2" label="最新消息" flat auto-close stretch/>
-        <q-btn-dropdown
-        class="q-my-md drawerBtns"
-        menu-self="top left"
-        auto-close stretch flat  label="集團事業體" @mouseenter="openDropdown2"
-  @mouseleave="closeDropdown2"
-  v-model="dropdownVisible2"  :class="{ 'dropdown-hovered': dropdownHovered2 || dropdownVisible2 }">
-          <q-list
-          class="lt-md" @mouseenter="keepDropdownOpen2" @mouseleave="closeDropdown2">
-            <q-item clickable @click="tab = '飲用水事業'">
-              <q-item-section>飲用水事業</q-item-section>
-            </q-item>
+        stretch flat label="關於鼎泰勝"
+        @click="showSubmenu = !showSubmenu"
+        />
 
-            <q-item clickable @click="tab = '生技事業'">
-              <q-item-section>生技事業</q-item-section>
-            </q-item>
-            <q-item clickable @click="tab = '餐飲事業'">
-              <q-item-section>餐飲事業</q-item-section>
-            </q-item>
-            <q-item clickable @click="tab = '水酒事業'">
-              <q-item-section >水酒事業</q-item-section>
-            </q-item>
-            <q-item clickable @click="tab = '裝修工程事業'">
-              <q-item-section style="font-size: 11px;">裝修工程事業</q-item-section>
-            </q-item>
-          </q-list>
-        </q-btn-dropdown>
+        <q-collapse class="bg-grey column items-center justify-center" v-if="showSubmenu">
+
+          <q-btn
+          class="q-my-md drawerBtns"
+          clickable to="/overView"
+          stretch flat label="集團概述"
+          @click="showSubmenu = false"
+          />
+
+          <q-btn
+          class="q-my-md drawerBtns"
+          clickable to="/chronicle"
+          stretch flat label="集團事紀"
+          @click="showSubmenu = false"
+          />
+
+          <q-btn
+          class="q-my-md drawerBtns"
+          clickable to="/vision"
+          auto-close stretch flat label="願景與宗旨"
+          @click="showSubmenu = false"
+          />
+
+        </q-collapse>
+
+        <q-btn-dropdown
+        class="q-my-md drawerBtns" to="/news" label="最新消息" flat auto-close stretch/>
+        <q-btn
+        class="q-my-md drawerBtns"
+        stretch flat label="集團事業體"
+        @click="showSubmenu2 = !showSubmenu2"
+        />
+
+        <q-collapse class="bg-grey column items-center justify-center" v-if="showSubmenu2">
+
+          <q-btn
+          class="q-my-md drawerBtns"
+          clickable to="/#"
+          stretch flat label="飲用水事業"
+          @click="showSubmenu2 = false"
+          />
+
+          <q-btn
+          class="q-my-md drawerBtns"
+          clickable to="/#"
+          stretch flat label="生技事業"
+          @click="showSubmenu2 = false"
+          />
+
+          <q-btn
+          class="q-my-md drawerBtns"
+          clickable to="/#"
+          auto-close stretch flat label="餐飲事業"
+          @click="showSubmenu2 = false"
+          />
+          <q-btn
+          class="q-my-md drawerBtns"
+          clickable to="/#"
+          auto-close stretch flat label="水酒事業"
+          @click="showSubmenu2 = false"
+          />
+          <q-btn
+          class="q-my-md drawerBtns"
+          clickable to="/#"
+          auto-close stretch flat label="裝修工程事業"
+          @click="showSubmenu2 = false"
+          />
+
+        </q-collapse>
+
         <q-btn-dropdown         class="q-my-md drawerBtns" to="/page3" label="企業社會責任" />
         <q-btn-dropdown         class="q-my-md drawerBtns" to="/page3" label="人才招募" />
         <q-btn-dropdown         class="q-my-md drawerBtns" to="/page3" label="聯絡我們" />
@@ -207,6 +234,8 @@ const dropdownVisible = ref(false)
 const dropdownHovered2 = ref(false)
 const dropdownVisible2 = ref(false)
 const rightDrawerOpen = ref(false)
+const showSubmenu = ref(false)
+const showSubmenu2 = ref(false)
 let closeDropdownTimeout = null
 const toggleRightDrawer = () => {
   rightDrawerOpen.value = !rightDrawerOpen.value

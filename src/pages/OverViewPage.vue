@@ -16,8 +16,7 @@
   <!-- 介紹區 -->
     <!-- 卡片第一層 -->
 
-    <q-card data-aos="fade-up" data-aos-duration="2000"
-    data-aos-anchor-placement ="bottom-bottom" class="card01  row">
+    <q-card data-aos="fade-up" data-aos-duration="2000" class="card01  row">
       <img src="~assets/overView/pic01.jpg" class="col-12 col-md-5">
 
       <q-card-section class=" col-12 col-md-7 card01Text bg-grey text-white"><p>

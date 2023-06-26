@@ -10,7 +10,7 @@
 // }
 @font-face {
   font-family: "jf-openhuninn-2.0";
-  src: url(/jf-openhuninn-2.0.woff);
+  src: url(../assets/jf-openhuninn-2.0.woff);
 }
 body{
   overflow-x: hidden;
@@ -86,11 +86,12 @@ body{
 .q-timeline__content{
   width: 100%;
   font-size: 15px;
-  @media(max-width: 996px){
-    font-size: 10px;
-  }
+  // @media(max-width: 996px){
+  //   font-size: 10px;
+  // }
   @media(max-width: 768px){
-    font-size: 5px;
+    font-size: 15px;
+    padding-left: 0;
   }
 }
 
@@ -134,3 +135,4 @@ body{
   top: 28px;
   left: 14px;
 }
+
