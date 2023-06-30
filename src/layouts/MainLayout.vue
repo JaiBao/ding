@@ -24,8 +24,9 @@
             </q-item>
           </q-list>
         </q-btn-dropdown>
-        <q-btn-dropdown class="titleBtns" to="/page2" label="最新消息" flat auto-close stretch/>
-        <q-btn-dropdown class="titleBtns" auto-close stretch flat  label="集團事業體" @mouseenter="openDropdown2"
+        <q-btn-dropdown class="titleBtns" to="/news" label="最新消息" flat auto-close stretch/>
+        <q-btn-dropdown class="titleBtns" to="/business" label="集團事業體" flat auto-close stretch/>
+        <!-- <q-btn-dropdown class="titleBtns" auto-close stretch flat  label="集團事業體" @mouseenter="openDropdown2"
   @mouseleave="closeDropdown2"
   v-model="dropdownVisible2"  :class="{ 'dropdown-hovered': dropdownHovered2 || dropdownVisible2 }">
           <q-list
@@ -47,10 +48,10 @@
               <q-item-section style="font-size: 11px;">裝修工程事業</q-item-section>
             </q-item>
           </q-list>
-        </q-btn-dropdown>
-        <q-btn-dropdown class="titleBtns" to="/page3" label="企業社會責任" />
-        <q-btn-dropdown class="titleBtns" to="/page3" label="人才招募" />
-        <q-btn-dropdown class="titleBtns" to="/page3" label="聯絡我們" />
+        </q-btn-dropdown> -->
+        <q-btn-dropdown class="titleBtns" to="/social" label="企業社會責任" />
+        <q-btn-dropdown class="titleBtns" to="/recruit" label="人才招募" />
+        <q-btn-dropdown class="titleBtns" to="/message" label="聯絡我們" />
       </q-tabs>
     </div>
   </div>
@@ -97,7 +98,9 @@
 
         <q-btn-dropdown
         class="q-my-md drawerBtns" to="/news" label="最新消息" flat auto-close stretch/>
-        <q-btn
+        <q-btn-dropdown
+        class="q-my-md drawerBtns" to="/business" label="集團事業體" flat auto-close stretch/>
+        <!-- <q-btn
         class="q-my-md drawerBtns"
         stretch flat label="集團事業體"
         @click="showSubmenu2 = !showSubmenu2"
@@ -138,11 +141,11 @@
           @click="showSubmenu2 = false"
           />
 
-        </q-collapse>
+        </q-collapse> -->
 
-        <q-btn-dropdown         class="q-my-md drawerBtns" to="/page3" label="企業社會責任" />
-        <q-btn-dropdown         class="q-my-md drawerBtns" to="/page3" label="人才招募" />
-        <q-btn-dropdown         class="q-my-md drawerBtns" to="/page3" label="聯絡我們" />
+        <q-btn-dropdown         class="q-my-md drawerBtns" to="/social" label="企業社會責任" />
+        <q-btn-dropdown         class="q-my-md drawerBtns" to="/recruit" label="人才招募" />
+        <q-btn-dropdown         class="q-my-md drawerBtns" to="/message" label="聯絡我們" />
         <q-btn class="drawerBtns"   @click="toggleRightDrawer" >關閉<i class="fa-sharp fa-light fa-x" style="color: #ffffff;"></i>
           </q-btn>
 
@@ -167,7 +170,8 @@
                 </ul>
             </div>
             <div class="contactUs col-12 col-md-3 col-sm-6">
-                <h5>集團事業體</h5>
+              <router-link to="/business"><h5>集團事業體</h5></router-link>
+                <!-- <h5>集團事業體</h5>
                 <ul>
                     <li><a href="#">飲用水事業</a></li>
                     <li><a href="#">生技事業</a></li>
@@ -175,22 +179,17 @@
                     <li><a href="#">影視事業</a></li>
                     <li><a href="#">水酒事業</a></li>
                     <li><a href="#">裝修工程事業</a></li>
-                </ul>
+                </ul> -->
             </div>
             <div class="contactUs col-12 col-md-3 col-sm-6">
-                <h5>企業社會責任</h5>
-                <ul>
-                    <li><a href="/overView">集團概述</a></li>
-                    <li><a href="#">集團事紀</a></li>
-                    <li><a href="#">願景與宗旨</a></li>
-                </ul>
+              <router-link to="/social"><h5>企業社會責任</h5></router-link>
             </div>
             <div class="contactUs col-12 col-md-3 col-sm-6">
-                <h5>人才招募</h5>
+              <router-link to="/recruit"> <h5>人才招募</h5></router-link>
 
             </div>
             <div class="contactUs col-12 col-md-3 col-sm-6">
-                <h5>聯絡我們</h5>
+              <router-link to="/message"> <h5>聯絡我們</h5></router-link>
 
             </div>
             <!-- <div class="popularNews">
@@ -208,7 +207,7 @@
             </div> -->
 
         </div>
-<div class="row">
+<div class="row q-mt-md">
    <div class="copyright col-12">
     <div class="copyrightLogo col-md-6 col-12">
   <img  src="../assets/indexpic/logo.png" ></div>
@@ -231,11 +230,11 @@
 import { ref } from 'vue'
 const dropdownHovered = ref(false)
 const dropdownVisible = ref(false)
-const dropdownHovered2 = ref(false)
-const dropdownVisible2 = ref(false)
+// const dropdownHovered2 = ref(false)
+// const dropdownVisible2 = ref(false)
 const rightDrawerOpen = ref(false)
 const showSubmenu = ref(false)
-const showSubmenu2 = ref(false)
+// const showSubmenu2 = ref(false)
 let closeDropdownTimeout = null
 const toggleRightDrawer = () => {
   rightDrawerOpen.value = !rightDrawerOpen.value
@@ -258,21 +257,21 @@ function keepDropdownOpen () {
   dropdownHovered.value = true
 }
 
-function openDropdown2 () {
-  if (closeDropdownTimeout) clearTimeout(closeDropdownTimeout)
-  dropdownVisible2.value = true
-}
-function keepDropdownOpen2 () {
-  if (closeDropdownTimeout) clearTimeout(closeDropdownTimeout)
-  dropdownVisible2.value = true
-  dropdownHovered2.value = true
-}
-function closeDropdown2 () {
-  closeDropdownTimeout = setTimeout(() => {
-    dropdownVisible2.value = false
-    dropdownHovered2.value = false
-  }, 200) // 延遲 200 毫秒
-}
+// function openDropdown2 () {
+//   if (closeDropdownTimeout) clearTimeout(closeDropdownTimeout)
+//   dropdownVisible2.value = true
+// }
+// function keepDropdownOpen2 () {
+//   if (closeDropdownTimeout) clearTimeout(closeDropdownTimeout)
+//   dropdownVisible2.value = true
+//   dropdownHovered2.value = true
+// }
+// function closeDropdown2 () {
+//   closeDropdownTimeout = setTimeout(() => {
+//     dropdownVisible2.value = false
+//     dropdownHovered2.value = false
+//   }, 200) // 延遲 200 毫秒
+// }
 
 </script>
 
@@ -284,7 +283,7 @@ function closeDropdown2 () {
 }
 
 .footer_area {
-  max-width: 1170px;
+  max-width: 1440px;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -326,6 +325,7 @@ function closeDropdown2 () {
 
 h5{
   margin-bottom:5px;
+  // font-weight: border;
   i{
     margin: 5px;
   }

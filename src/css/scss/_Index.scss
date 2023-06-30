@@ -167,12 +167,13 @@ font-weight: 500;
 }
 .indexParallax{
   padding-top: 0;
-  height: 700px;
+  margin-top: 0;
+  height: 500px;
   @media(max-width: 768px){
     height: 500px;
   }
   .custom-caption{
-    margin-top: 10%;
+    margin-top: 2%;
    top: 10%;
    margin-right:10%;
 
@@ -225,7 +226,12 @@ font-weight: 500;
 
 }
 .recruit{
-  @media(max-width: 768px){
+  display: flex;
+  flex-direction: row;
+  img{width: 30%;}
+  @media(max-width: 996px){
+    display: flex;
+    flex-direction: column;
     img{width: 100%;}
   }
 }

@@ -31,7 +31,7 @@
             <div class="cardGroupTitle absolute-center text-subtitle2 text-center q-pa-none ">|飲用水事業|<br ><br >年銷售超過<br>
           <h4>{{ formatNumber(counters[0]) }}<span>箱</span></h4><br>年銷售超過<br><h4>{{ formatNumber(counters[4]) }}<span>瓶</span></h4>
             </div>
-            <img src="~assets/overView/pic06.jpg" alt="飲用水事業" >
+            <img src="~assets/overView/pic03.jpg" alt="飲用水事業" >
         </div>
       </q-card>
 <div class="col col-md-4 col-sm-12">
@@ -40,7 +40,7 @@
             <div class="cardGroupTitle absolute-center text-subtitle2 text-center q-pa-none ">|裝修工程事業|<br><br>合作建案超過<br>
           <h4>{{ formatNumber(counters[1]) }}<span>件</span></h4>
             </div>
-            <img src="~assets/overView/pic05.jpg" alt="裝修工程事業" >
+            <img src="~assets/overView/pic04.jpg" alt="裝修工程事業" >
         </div>
       </q-card>
     <q-card class="news  cardGroup  col-md-3 col-sm-12">

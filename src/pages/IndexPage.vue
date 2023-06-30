@@ -62,7 +62,7 @@
     </div>
   </div>
   <!-- 6大產業介紹 -->
-  <div data-aos="fade-left"
+  <div data-aos="fade-up"
      data-aos-duration="300" class="section01">
     <div class="container container-md">
       <h4 style="margin: 0;">鼎泰勝六大事業 多元展新績</h4>
@@ -85,7 +85,7 @@
           Drinking Water Business
         </p>
         <div class="image-content">
-            <img src="~assets/indexpic/industry5.jpg" alt="飲用水事業" >
+            <img src="~assets/indexpic/industry1.jpg" alt="飲用水事業" >
         </div>
       </q-card>
       <!-- 2 -->
@@ -134,14 +134,16 @@
           Decoration Engineering Business
         </p>
         <div class="image-content">
-            <img src="~assets/indexpic/industry2.jpg" alt="裝修工程事業">
+            <img src="~assets/indexpic/industry6.jpg" alt="裝修工程事業">
         </div>
       </q-card>
     </div>
   </div>
 <!-- 人才招募 -->
 <div data-aos="fade-up" data-aos-duration="3000" class="row  recruit justify-center q-ma-md col-sm-12">
+
 <img  src="~assets/indexpic/0-pic-11.jpg" alt="人才招募" >
+<img  src="~assets/indexpic/0-pic-12.jpg" alt="人才招募2" >
 </div>
   </q-page>
 </template>

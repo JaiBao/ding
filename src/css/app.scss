@@ -2,20 +2,45 @@
 @import "@/css/scss/overview.scss";
 @import "@/css/scss/chronicle.scss";
 @import "@/css/scss/vision.scss";
+@import "@/css/scss/news.scss";
+@import "@/css/scss/social.scss";
+@import "@/css/scss/recruit.scss";
+@import "@/css/scss/business.scss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+
 // app global css in SCSS form
 // body{
 //   @media (max-width:568) {
 //     overflow-x: hidden;
 //   }
 // }
-@font-face {
-  font-family: "jf-openhuninn-2.0";
-  src: url(../assets/jf-openhuninn-2.0.woff);
-}
-body{
+// @font-face {
+//   font-family: "jf-openhuninn-2.0";
+//   src: url(../assets/jf-openhuninn-2.0.woff);
+// }
+// body{
+//   overflow-x: hidden;
+//   font-family: "jf-openhuninn-2.0";
+// }
+
+
+body {
   overflow-x: hidden;
-  font-family: "jf-openhuninn-2.0";
+  font-family: 'Noto Sans TC', sans-serif;
 }
+h5 {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.bg-red {
+  background: #e60012 !important;
+}
+.text-h2 {
+  font-size: 3.75rem;
+  font-weight: 500;
+  line-height: 3.75rem;
+  letter-spacing: -0.00833em;
+}
+
 // 標題區紅色底線
 .q-header {
   border-bottom: 2px solid #e60012;
@@ -78,7 +103,7 @@ body{
   }
   @media (max-width: 568px) {
     span{
-      font-size: 13px;
+      font-size: 12px;
     }
   }
 }
@@ -135,4 +160,20 @@ body{
   top: 28px;
   left: 14px;
 }
+.newsSearch{
+  margin: 10px;
+  width: 60vw;
+  .q-field--outlined.q-field--rounded .q-field__control {
+    border-radius: 12px;
+}
 
+ @media (max-width: 992px) {
+  width: 60vw;
+  .q-field{
+    width:100%
+   }
+   .q-field--outlined.q-field--rounded .q-field__control {
+    border-radius: 24px;
+}
+ }
+}

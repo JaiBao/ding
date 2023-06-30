@@ -2,9 +2,9 @@
   <q-page>
     <!-- 大圖視差 -->
 
-<div class="q-pa-xs full-width " >
+<div class="q-pa-xs full-width pageParallax" >
 <q-parallax
-  src="~assets/overView/viewPic.jpg"
+  src="~assets/news/2-pic-1.jpg"
 >
 <div class="absolute-left-center custom-caption2">
 
@@ -14,7 +14,7 @@
 </q-parallax>
 </div>
 <!-- table區 -->
-<div class="row justify-center">
+<div class="row justify-center" >
   <div class="q-pa-md row justify-end newsSearch">
     <q-select v-model="selectedTime" :options="times"  clearable
     @clear="selectedTime = defaultTime"
@@ -29,18 +29,18 @@
     <q-select  rounded outlined v-model="selectedBusiness" :options="businessTypes"  clearable
     @clear="selectedBusiness = '事業體選擇'"
     bg-color="grey-4"/>
-    <q-input  rounded  outlined v-model="searchKeyword" label="搜索" bg-color="grey-4">
+    <q-input  rounded  outlined v-model="searchKeyword" label="關鍵字搜索" bg-color="grey-4">
     <template v-slot:append>
     <q-icon name="search" class="search-icon" />
   </template>
     </q-input>
     </div>
 
-    <div v-for="card in currentPageCards" :key="card.id" class="q-ma-md row justify-center">
+    <div v-for="card in currentPageCards" :key="card.id" class="q-ma-md row justify-center" data-aos="fade-up" data-aos-duration="2000">
       <q-card class="newsPageCard">
-        <q-card-section class="row gutter-xs q-gutter-xl" horizontal>
-            <img :src="card.image" class="col-3 newsPageImg" >
-            <div class="col-8 newsPageText">
+        <q-card-section class=" gutter-xs q-gutter-xl newsPageCard2" horizontal>
+            <img :src="card.image" class="col-12 col-md-3 newsPageImg" >
+            <div class="col-12 col-md-8 newsPageText">
               <div class="newsTime">{{ card.time }}</div>
               <div class="newsTitle">{{ card.businessType }}|{{ card.title }} </div>
               <div class="newsContent">{{ card.content }}</div>
@@ -55,11 +55,42 @@
       </q-card>
     </div>
   </div>
-  <q-pagination v-model="currentPage" :max="totalPages" class="row justify-center q-ma-md" :input="true"  />
+  <q-pagination v-model="currentPage" :max="totalPages" class="row justify-center q-ma-md" :input="true"  @input="goToTop"/>
+
+    <!-- <q-page-sticky position="bottom-right" :offset="fabPos">
+              <q-fab
+                icon="search"
+                direction="up"
+                color="accent"
+                :disable="draggingFab"
+                v-touch-pan.prevent.mouse="moveFab"
+              >
+              <div class="q-pa-md row justify-end newsSearch">
+              <q-select v-model="selectedTime" :options="times"  clearable
+      @clear="selectedTime = defaultTime"
+      option-label="label"
+      rounded outlined
+      bg-color="grey-4"
+      >
+      <template v-slot:clear-icon>
+      <q-icon name="clear" size="18px" color="red" />
+    </template>
+      </q-select>
+      <q-select  rounded outlined v-model="selectedBusiness" :options="businessTypes"  clearable
+      @clear="selectedBusiness = '事業體選擇'"
+      bg-color="grey-4"/>
+      <q-input  rounded  outlined v-model="searchKeyword" label="搜索" bg-color="grey-4">
+      <template v-slot:append>
+      <q-icon name="search" class="search-icon" />
+    </template>
+      </q-input>
+      </div>
+              </q-fab>
+            </q-page-sticky> -->
   </q-page>
 </template>
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch, nextTick } from 'vue'
 function generateTimeRange (startMonth, endMonth) {
   const startDate = new Date(startMonth)
   const endDate = new Date(endMonth)
@@ -102,11 +133,16 @@ const selectedBusiness = ref('事業體選擇')
 const searchKeyword = ref('')
 const cardsPerPage = 3
 const currentPage = ref(1)
+watch(currentPage, () => {
+  nextTick(() => {
+    window.scrollTo({ top: 500, behavior: 'smooth' })
+  })
+})
 
 const cards = ref([
   {
     id: 1,
-    image: '/indexpic/industry2.jpg',
+    image: '/news/2-pic-2.jpg',
     time: '2023/05/15',
     title: '香臨食品南部分公司成立',
     businessType: '餐飲事業',
@@ -114,7 +150,7 @@ const cards = ref([
   },
   {
     id: 2,
-    image: '/indexpic/industry2.jpg',
+    image: '/news/2-pic-3.jpg',
     time: '2023/04/20',
     title: '森淋泉生技飲用水設備全面化升級、熱銷水產品新裝登場',
     businessType: '飲用水事業',
@@ -122,7 +158,7 @@ const cards = ref([
   },
   {
     id: 3,
-    image: '/indexpic/industry2.jpg',
+    image: '/news/2-pic-4.jpg',
     time: '2022/10/17',
     title: ' 鼎泰勝集團總部喬遷，進駐群光大樓',
     businessType: '集團總部 ',
@@ -130,7 +166,7 @@ const cards = ref([
   },
   {
     id: 4,
-    image: '/indexpic/industry2.jpg',
+    image: '/news/2-pic-3.jpg',
     time: '2023/08/15',
     title: '香臨2323232',
     businessType: '餐飲事業',
@@ -138,7 +174,7 @@ const cards = ref([
   },
   {
     id: 5,
-    image: '/indexpic/industry2.jpg',
+    image: '/news/2-pic-2.jpg',
     time: '2023/09/15',
     title: '標題3',
     businessType: '類型3',
@@ -146,7 +182,7 @@ const cards = ref([
   },
   {
     id: 6,
-    image: '/indexpic/industry2.jpg',
+    image: '/news/2-pic-4.jpg',
     time: '2023/04/20',
     title: '森淋泉生技飲用水設備全面化升級、熱銷水產品新裝登場',
     businessType: '飲用水事業',
@@ -174,52 +210,19 @@ const currentPageCards = computed(() => {
   const end = start + cardsPerPage
   return filteredCards.value.slice(start, end)
 })
+
+// const fabPos = ref([18, 18])
+// const draggingFab = ref(false)
+
+// const moveFab = (ev) => {
+//   draggingFab.value = ev.isFirst !== true && ev.isFinal !== true
+
+//   fabPos.value = [
+//     fabPos.value[0] - ev.delta.x,
+//     fabPos.value[1] - ev.delta.y
+//   ]
+// }
 </script>
 <style lang="scss" scoped>
-.newsPageCard{
-  width: 60vw;
-  // min-width: 983.5px;
-  // box-shadow: 0 0  5px  #e60012;
 
-}
-.hr-news {
-  height: 1px;
-width: 100%;
-display: inline-block;
-padding: 0;
-border: none;
-background: #e60012;
-@media (max-width:568px){
-  width: 330px;
-}
-
-}
-.newsTime{
-  color: #e60012;
-  margin: 10px;
-  font-size: 20px;
-}
-.newsTitle{
-  font-size: 30px;
-  font-weight: 50;
-  margin: 10px;
-}
-.newsContent{
-  color: #bdbdbd;
-  font-size: 15px;
-  margin: 10px;
-}
-.newsSearch{
-  margin: 10px;
- width: 50%;
-
-}
-.custom-clearable .q-field__icon-container {
-  font-size: 13px; /* 调整清除图标的大小 */
-  color: #e60012; /* 调整清除图标的颜色 */
-}
-.newsPageBtn{
-  color: #ffffff;
-  background-color: #e60012;
-}
 </style>

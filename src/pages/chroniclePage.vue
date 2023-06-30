@@ -24,7 +24,7 @@
         color="black"
         class="chronicleTimeline"
       >
-        <li  data-aos="fade-left" data-aos-duration="2000"  v-for="(text, index) in chronicle.texts" :key="index"><i class="fa-sharp fa-solid fa-circle"></i> {{text.time}}  {{text.text}}<img v-if="text.image" :src="text.image"></li>
+        <li  data-aos="fade-up" data-aos-duration="2000"  v-for="(text, index) in chronicle.texts" :key="index"><i class="fa-sharp fa-solid fa-circle"></i> {{text.time}}  {{text.text}}<img v-if="text.image" :src="text.image"></li>
         <!-- <div v-for="(text, index) in chronicle.texts" :key="`img-${index}`">
 
         </div> -->
@@ -51,7 +51,7 @@ const chronicles = ref([
       }, {
         time: '04/01',
         text: '飲用水事業 | 水泉水生技公司正式成立，全省經銷服務啟動',
-        image: '/indexpic/cir02.jpg'
+        image: '/chronicle/1-2-pic-2.jpg'
       }
     ]
   },
@@ -62,11 +62,11 @@ const chronicles = ref([
       {
         time: '10/17',
         text: '集團總部 | 鼎泰勝集團總部喬遷，進駐群光大樓',
-        image: '/indexpic/cir03.jpg'
+        image: '/chronicle/1-2-pic-3.jpg'
       }, {
         time: '',
         text: '餐飲事業 | 少小白榮獲「2021 第十一屆亞太優質餐飲連鎖品牌獎」',
-        image: '/indexpic/cir04.jpg'
+        image: '/chronicle/1-2-pic-4.jpg'
       }, {
         time: '',
         text: '裝修工程事業 | 家荷工程 正式成立'
@@ -80,7 +80,7 @@ const chronicles = ref([
       {
         time: '',
         text: '飲用水事業 | 森淋泉生技加入，飲用水全省通路上架',
-        image: '/indexpic/cir03.jpg'
+        image: '/chronicle/1-2-pic-5.jpg'
       }, {
         time: '',
         text: '餐飲事業 | 創立迷港家叉燒舖品牌'
@@ -103,7 +103,7 @@ const chronicles = ref([
       }, {
         time: '',
         text: '影視事業 | 福汎國際正式成立',
-        image: '/indexpic/cir06.jpg'
+        image: '/chronicle/1-2-pic-6.jpg'
       }
     ]
   },

@@ -2,7 +2,7 @@
 <!-- 大圖視差 -->
 <div class="q-pa-xs full-width " >
 <q-parallax
-  src="~assets/vision/vis01.jpg"
+  src="~assets/vision/1-3-pic-1.jpg"
 >
 <div class=" absolute-left-center custom-caption2">
         <div class="text-black text-h2 alight-center" >願景與宗旨</div>
@@ -12,7 +12,7 @@
 </div>
 <!-- 圖片區 -->
 <div class="q-pa-md  row justify-center visonImage">
-  <img src="../assets/indexpic/0-pic-11.jpg">
+  <img src="~assets/vision/1-3-pic-2.jpg">
 </div>
 <!-- 介紹區 -->
 <div class="row q-mx-auto items-center q-pa-md  visionText ">
@@ -46,8 +46,8 @@
 </div>
 <!-- 圖片區 -->
 <div class="q-ma-md row justify-center items-center visonImage2">
-  <img src="../assets/indexpic/0-pic-11.jpg">
-  <img src="../assets/indexpic/0-pic-11.jpg">
+  <img src="~assets/vision/1-3-pic-3.jpg">
+  <img src="~assets/vision/1-3-pic-4.jpg">
 </div>
 <!-- 文字 -->
 <div class="row q-mx-auto  items-center  q-pa-md  visionText3 ">

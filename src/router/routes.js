@@ -49,6 +49,42 @@ const routes = [
           login: false,
           admin: false
         }
+      },
+      {
+        path: '/social',
+        component: () => import('src/pages/socialPage.vue'),
+        meta: {
+          title: '企業社會責任',
+          login: false,
+          admin: false
+        }
+      },
+      {
+        path: '/recruit',
+        component: () => import('src/pages/recruitPage.vue'),
+        meta: {
+          title: '人才招募',
+          login: false,
+          admin: false
+        }
+      },
+      {
+        path: '/message',
+        component: () => import('src/pages/sendMessage.vue'),
+        meta: {
+          title: '聯絡我們',
+          login: false,
+          admin: false
+        }
+      },
+      {
+        path: '/business',
+        component: () => import('src/pages/businessPage.vue'),
+        meta: {
+          title: '集團事業體',
+          login: false,
+          admin: false
+        }
       }
     ]
   },
