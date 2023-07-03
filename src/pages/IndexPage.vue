@@ -1,15 +1,15 @@
 <template>
   <q-page>
 <!-- 大圖視差 -->
-<div class="q-pa-xs full-width indexParallax" >
+<div class=" full-width indexParallax" >
 
     <q-parallax
-      src="~assets/indexpic/carousel.jpg"
+      src="~assets/indexpic/0-pic-1.jpg"
       style="height: 100%;"
     >
     <div data-aos="zoom-out"
     data-aos-duration="3000"    class="absolute-right custom-caption q-pa-" >
-          <div class="text-h2 customLogo"><img src="~assets/indexpic/logo.png" ></div>
+          <div class="text-h2 customLogo"><img src="~assets/indexpic/0-pic-13.png" ></div>
           <div  class="text-white text-h4 alight-center customText" >卓越 穩健 創新</div>
           <div  class="text-white text-h3 alight-center customText2" >攜手共創美好未來</div>
         </div>
@@ -85,7 +85,7 @@
           Drinking Water Business
         </p>
         <div class="image-content">
-            <img src="~assets/indexpic/industry1.jpg" alt="飲用水事業" >
+            <img src="~assets/indexpic/0-pic-5.jpg" alt="飲用水事業" >
         </div>
       </q-card>
       <!-- 2 -->
@@ -94,7 +94,7 @@
           Catering Business
         </p>
         <div class="image-content">
-            <img src="~assets/indexpic/industry2.jpg" alt="餐飲事業" >
+            <img src="~assets/indexpic/0-pic-6.jpg" alt="餐飲事業" >
         </div>
       </q-card>
       <!-- 3 -->
@@ -104,7 +104,7 @@
           Wine And Water Business
         </p>
         <div class="image-content">
-            <img src="~assets/indexpic/industry3.jpg" alt="水酒事業" >
+            <img src="~assets/indexpic/0-pic-7.jpg" alt="水酒事業" >
         </div>
       </q-card>
       <!-- 4 -->
@@ -114,7 +114,7 @@
           Biotechnology Business
         </p>
         <div class="image-content">
-            <img src="~assets/indexpic/industry4.jpg" alt="生技事業" >
+            <img src="~assets/indexpic/0-pic-8.jpg" alt="生技事業" >
         </div>
       </q-card>
       <!-- 5 -->
@@ -124,7 +124,7 @@
           Media Studio
         </p>
         <div class="image-content">
-            <img src="~assets/indexpic/industry5.jpg" alt="影視事業" >
+            <img src="~assets/indexpic/0-pic-9.jpg" alt="影視事業" >
         </div>
       </q-card>
       <!-- 6 -->
@@ -134,7 +134,7 @@
           Decoration Engineering Business
         </p>
         <div class="image-content">
-            <img src="~assets/indexpic/industry6.jpg" alt="裝修工程事業">
+            <img src="~assets/indexpic/0-pic-10.jpg" alt="裝修工程事業">
         </div>
       </q-card>
     </div>

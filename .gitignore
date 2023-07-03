@@ -3,6 +3,7 @@
 node_modules
 fullchain.crt
 privkey.pem
+default.conf
 # Quasar core related directories
 .quasar
 /dist

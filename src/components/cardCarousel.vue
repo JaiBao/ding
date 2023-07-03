@@ -27,15 +27,15 @@ import 'vue3-carousel/dist/carousel.css'
 
 const slides = ref([
   {
-    image: '/indexpic/read1.jpg',
+    image: '/indexpic/0-pic-2.jpg',
     time: '2023/05/15',
     text: '餐飲事業|香臨食品南部分公司正式成立'
   }, {
-    image: '/indexpic/read2.jpg',
+    image: '/indexpic/0-pic-3.jpg',
     time: '2023/04/20',
     text: '飲用水事業|森淋泉生技飲用水設備全面化升級、熱銷水產品新裝登場'
   }, {
-    image: '/indexpic/read3.jpg',
+    image: '/indexpic/0-pic-4.jpg',
     time: '2022/10/17',
     text: '集團總部|鼎泰勝集團總部喬遷，進駐群光大樓'
   }

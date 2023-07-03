@@ -2,7 +2,7 @@
   <q-page>
     <!-- 大圖視差 -->
 
-    <div class="q-pa-xs full-width " >
+    <div class=" full-width " >
 <q-parallax
   src="~assets/social/4-pic-1.jpg"
 >
@@ -31,34 +31,31 @@
 <div class="socialImage q-ma-md">
   <hr class="hrShort">
 <div class="row center-align">
-  <!-- <div class="col-6">
-    <img src="../assets/social/1.jpg">
-  </div> -->
   <div class="col-4 column justify-center items-center col-md-2">
-    <img src="~assets/social/4-pic-2.png">
+    <img ref="icon2" src="~assets/social/4-pic-2.png">
     <p>親子關懷</p>
   </div>
   <div class="col-4 column justify-center items-center col-md-2">
-    <img src="~assets/social/4-pic-3.png">
+    <img ref="icon3" src="~assets/social/4-pic-3.png">
     <p>醫護支持</p>
   </div>
   <div class="col-4 column justify-center items-center col-md-2 ">
-    <img src="~assets/social/4-pic-4.png">
+    <img ref="icon4" src="~assets/social/4-pic-4.png">
     <p>教育推動</p>
   </div>
   <div class="col-4 column justify-center items-center col-md-2">
-    <img src="~assets/social/4-pic-5.png">
+    <img ref="icon5" src="~assets/social/4-pic-5.png">
     <p>體育贊助</p>
   </div>
   <div class="col-4 column justify-center items-center col-md-2">
-    <img src="~assets/social/4-pic-6.png">
+    <img ref="icon6" src="~assets/social/4-pic-6.png">
     <p>藝文推廣</p>
   </div>
 </div>
 </div>
 <!-- 卡片1 -->
 <q-card  class="card03  row">
-      <img src="~assets/social/4-pic-7.jpg" class="col-12 col-md-5">
+      <img  src="~assets/social/4-pic-7.jpg" class="col-12 col-md-5">
 
       <q-card-section class=" col-12 col-md-7 card03Text bg-red text-white">   <h2>
       公益參與<span>Public Welfare</span>
@@ -70,9 +67,9 @@
 2020年 協辦防疫新生活 親子童樂趣活動
         </p>
       </q-card-section>
-      <img src="~assets/social/4-pic-9.jpg" class="col-12 col-md-4">
-      <img src="~assets/social/4-pic-10.jpg" class="col-12 col-md-3">
-      <img src="~assets/social/4-pic-11.jpg" class="col-12 col-md-5">
+      <img  src="~assets/social/4-pic-9.jpg" class="col-12 col-md-4">
+      <img  src="~assets/social/4-pic-10.jpg" class="col-12 col-md-3">
+      <img  src="~assets/social/4-pic-11.jpg" class="col-12 col-md-5">
     </q-card>
 <!-- icon圖 -->
     <div class="socialImage q-ma-md">
@@ -82,7 +79,7 @@
     <img src="../assets/social/1.jpg">
   </div> -->
   <div class="col-8 column justify-center items-center col-md-10">
-    <img src="~assets/social/4-pic-12.png">
+    <img ref="icon1" src="~assets/social/4-pic-12.png">
     <p>安心食品責任</p>
   </div>
 </div>
@@ -116,6 +113,54 @@
     </q-card>
   </q-page>
 </template>
+<script setup>
+import { ref, onMounted } from 'vue'
+import { gsap } from 'gsap'
+
+const icon1 = ref(null)
+const icon2 = ref(null)
+const icon3 = ref(null)
+const icon4 = ref(null)
+const icon5 = ref(null)
+const icon6 = ref(null)
+
+const bounceForward = (icons, index) => {
+  if (index >= icons.length) {
+    bounceBackward(icons, icons.length - 2) // 從後往前跳
+    return
+  }
+
+  gsap.fromTo(
+    icons[index].value,
+    { y: 0 },
+    { y: -10, repeat: 1, yoyo: true, duration: 0.5, onComplete: () => bounceForward(icons, index + 1) }
+  )
+}
+
+const bounceBackward = (icons, index) => {
+  if (index < 0) {
+    bounceForward(icons, 1)// 前面往後跳
+    return
+  }
+
+  gsap.fromTo(
+    icons[index].value,
+    { y: 0 },
+    { y: -10, repeat: 1, yoyo: true, duration: 0.5, onComplete: () => bounceBackward(icons, index - 1) }
+  )
+}
+
+onMounted(() => {
+  const forwardIcons = [icon2, icon3, icon4, icon5, icon6]
+  bounceForward(forwardIcons, 0)
+
+  gsap.fromTo(
+    icon1.value,
+    { y: 0 },
+    { y: -10, repeat: -1, yoyo: true, duration: 0.5 }
+  )
+})
+</script>
 <style lang="scss" scoped>
 
 </style>

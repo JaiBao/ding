@@ -1,6 +1,6 @@
 <template>
 <!-- 大圖視差 -->
-<div class="q-pa-xs full-width " >
+<div class=" full-width " >
 <q-parallax
   src="~assets/vision/1-3-pic-1.jpg"
 >

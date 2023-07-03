@@ -1,9 +1,9 @@
 <template>
 <!-- 大圖視差 -->
 
-<div class="q-pa-xs full-width " >
+<div class=" full-width " >
 <q-parallax
-  src="~assets/chronicle/chr01.jpg"
+  src="~assets/chronicle/1-2-pic-1.jpg"
 >
 <div class=" absolute-left-center custom-caption2">
 

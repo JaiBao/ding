@@ -2,9 +2,9 @@
   <q-page>
     <!-- 大圖視差 -->
 
-    <div class="q-pa-xs full-width " >
+    <div class="full-width " >
 <q-parallax
-  src="~assets/overView/viewPic.jpg"
+  src="~assets/business/3-pic-1.jpg"
 >
 <div class="absolute-left-center custom-caption2">
 
@@ -22,7 +22,7 @@
   <div class="businessCard">
   <div class="businessCard1 ">
   <q-card class="col col-md-2">
-    <img src="~assets/business/3-pic-4.jpg" class="businessImage" />
+    <img src="~assets/business/3-pic-2.jpg" class="businessImage" />
     <div class="businessText">
       飲用水事業
     </div>
@@ -31,7 +31,7 @@
 </div>
   <div class="businessCard1 ">
   <q-card class="col col-md-2">
-    <img src="~assets/business/3-pic-4.jpg" class="businessImage" />
+    <img src="~assets/business/3-pic-3.jpg" class="businessImage" />
     <div class="businessText">
       生技事業
     </div>
@@ -49,7 +49,7 @@
 </div>
   <div class="businessCard1 ">
   <q-card class="col col-md-2">
-    <img src="~assets/business/3-pic-4.jpg" class="businessImage" />
+    <img src="~assets/business/3-pic-5.jpg" class="businessImage" />
     <div class="businessText">
       影視事業
     </div>
@@ -57,7 +57,7 @@
   <q-btn class="businessBtn">福汎國際有限公司</q-btn></div>
   <div class="businessCard1 ">
   <q-card class="col col-md-2">
-    <img src="~assets/business/3-pic-4.jpg" class="businessImage" />
+    <img src="~assets/business/3-pic-6.jpg" class="businessImage" />
     <div class="businessText">
       水酒事業
     </div>
@@ -67,7 +67,7 @@
 </div>
   <div class="businessCard1 ">
   <q-card class="col col-md-2">
-    <img src="~assets/business/3-pic-4.jpg" class="businessImage" />
+    <img src="~assets/business/3-pic-7.jpg" class="businessImage" />
     <div class="businessText">
       裝修工程事業
     </div>
@@ -101,7 +101,7 @@ import { ref } from 'vue'
 const businessPageCards = ref([
   {
     id: 1,
-    image: '/business/3-pic-10.jpg',
+    image: '/business/3-pic-8.jpg',
     businessType2: 'Drinking Water Business',
     title: '森淋泉生技股份有限公司',
     businessType: '餐飲事業',
@@ -109,7 +109,7 @@ const businessPageCards = ref([
   },
   {
     id: 2,
-    image: '/business/3-pic-11.jpg',
+    image: '/business/3-pic-9.jpg',
     title: '京研國際股份有限公司',
     businessType: '生技事業',
     businessType2: 'Biotechnology Business',
@@ -133,7 +133,7 @@ const businessPageCards = ref([
   },
   {
     id: 5,
-    image: '/business/3-pic-10.jpg',
+    image: '/business/3-pic-12.jpg',
     businessType: '影視事業',
     businessType2: 'Media Studio',
     title: '福汎國際有限公司',
@@ -141,7 +141,7 @@ const businessPageCards = ref([
   },
   {
     id: 6,
-    image: '/business/3-pic-11.jpg',
+    image: '/business/3-pic-13.jpg',
     businessType: '水酒事業',
     businessType2: 'Wine And Water Business',
     title: '香臨食品股份有限公司',
@@ -149,7 +149,7 @@ const businessPageCards = ref([
   },
   {
     id: 7,
-    image: '/business/3-pic-10.jpg',
+    image: '/business/3-pic-14.jpg',
     businessType: '裝修工程事業',
     businessType2: 'Decoration Engineering Business ',
     title: '家荷工程股份有限公司',

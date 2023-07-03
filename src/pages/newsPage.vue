@@ -2,7 +2,7 @@
   <q-page>
     <!-- 大圖視差 -->
 
-<div class="q-pa-xs full-width pageParallax" >
+<div class=" full-width pageParallax" >
 <q-parallax
   src="~assets/news/2-pic-1.jpg"
 >

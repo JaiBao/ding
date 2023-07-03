@@ -6,7 +6,7 @@
         <q-toolbar-title>
   <div class="titleLogo row" >
     <q-btn to="/">
-    <img src="../assets/indexpic/logo.png"  to="/"></q-btn>
+    <img src="../assets/indexpic/0-pic-13.png"  to="/"></q-btn>
     <div class="gt-sm titleBtn row justify-center">
       <q-tabs align="left">
         <q-btn-dropdown class="titleBtns" auto-close stretch flat label="關於鼎泰勝"         @mouseenter="openDropdown"
@@ -210,7 +210,7 @@
 <div class="row q-mt-md">
    <div class="copyright col-12">
     <div class="copyrightLogo col-md-6 col-12">
-  <img  src="../assets/indexpic/logo.png" ></div>
+  <img  src="../assets/indexpic/0-pic-13.png" ></div>
   <div class="copyrightText " style="max-width: 600px;margin-left: 3%;"><h6>
     Copyright© 2023 鼎泰勝國際股份有限公司著作權所有 <br>隱私權與政策| Cookie政策
   </h6>
