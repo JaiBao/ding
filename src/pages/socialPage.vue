@@ -9,7 +9,7 @@
 <div class="absolute-left-center custom-caption2">
 
         <div class="text-black text-h2 alight-center" >企業社會責任</div>
-      <!-- <div class="text-grey text-h5 alight-center" >News</div> -->
+      <div class="text-grey text-h6 alight-center" >Corporate Social Responsibility</div>
     </div>
   </q-parallax>
 </div>
@@ -23,7 +23,7 @@
   </p>
   <p>
     為了更有效益的投入公益<br>
-    未來也將規劃專案部門來關懷弱勢畽體<br>
+    未來也將規劃專案部門來關懷弱勢團體<br>
     同時一起推動教育與體育活動及藝術文化事務<br>
   </p>
 </div>
@@ -32,7 +32,7 @@
   <hr class="hrShort">
 <div class="row center-align">
   <div class="col-4 column justify-center items-center col-md-2">
-    <img ref="icon2" src="~assets/social/4-pic-2.png">
+    <img ref="icon2" src="~assets/social/4-pic-2.png" >
     <p>親子關懷</p>
   </div>
   <div class="col-4 column justify-center items-center col-md-2">
@@ -55,16 +55,17 @@
 </div>
 <!-- 卡片1 -->
 <q-card  class="card03  row">
-      <img  src="~assets/social/4-pic-7.jpg" class="col-12 col-md-5">
+      <img  src="~assets/social/4-pic-7.jpg" class="col-12 col-md-5" >
 
       <q-card-section class=" col-12 col-md-7 card03Text bg-red text-white">   <h2>
       公益參與<span>Public Welfare</span>
     </h2>
         <p >
-          2023年 贊助捐血活動          <br>
+          2023年 贊助捐血活動   <br>
+          2022年 捐贈 彰化慈愛教養院 物資礦泉水       <br>
 2020年 贊助弱勢家庭長期供應豆奶產品          <br>
-2020年 舉辦疫情不怕挺醫護，用行動傳愛活動          <br>
-2020年 協辦防疫新生活 親子童樂趣活動
+2020年 舉辦「疫情不怕挺醫護，用行動傳愛」活動          <br>
+2020年 協辦「防疫新生活 親子童樂趣」活動
         </p>
       </q-card-section>
       <img  src="~assets/social/4-pic-9.jpg" class="col-12 col-md-4">
@@ -85,27 +86,35 @@
 </div>
 </div>
 <!-- 圖片 -->
-<div class="row socialSolo justify-center q-ma-md">
-
-  <img src="~assets/social/4-pic-13.jpg" alt="">
+<q-card class="row socialSolo ">
+<div class="socialCardImg col-md-6 col-12">
+  <img src="~assets/social/4-pic-13.jpg" alt="活動" >
 </div>
+<div class="socialCardText col-md-6 col-12">
+<h4>灌溉養份的種子 用良心做事、為社會奉獻！
+</h4>
+<p>鼎泰勝集團執行長說：「不管做什麼都要做對得起自己的事！」。就像「水」在人體占了超過七成的成份，所以喝對水便是重要的事；另外人類體內蛋白質對於健康至關重要，它是身體組織和器官的基本結構，同時參與免疫系統等關鍵過程。我們便是透過提供純淨的瓶裝水與業界最優質的豆漿產品，打下基礎，再從基礎上深耕與琢磨。我們做出我們都敢喝、大家都需要的產品，把最好的帶給社會大眾，同時將其普及化，做出人人都可以喝得起的、買得起的產品。</p>
+  <p>
+我們不僅提供了人們保持良好水分平衡的選擇，同時也為消費者提供了高質量的蛋白質來源。我們的目標是幫助人們實現健康的生活方式，深入融入這些理念，把健康福祉與良心做事納入我們的企業精神，為社會創造更美好健康的未來！
+</p>
+</div>
+</q-card>
+
 <!-- 卡片2 -->
 <q-card  class="card04  row">
 
-      <q-card-section class=" col-12 col-md-8 card04Text bg-grey text-white">
-        <div class="div">
+      <q-card-section class=" col-12 col-md-8 card04Text bg-grey text-white ">
+        <div class="food">
         <h2>
       安心食品管理
     </h2>
         <p >
-          集團秉持源頭管控的作法把關食品安全，從原物遴選到
-中央廚房製作，嚴格遵循食品安全SOP流程作業。落實源頭
-管理，將風險降地，做好食品安全管理才能提供安心產品。
+          集團秉持源頭管控的作法把關食品安全，從原物遴選到中央廚房製作，嚴格遵循食品安全SOP流程作業。落實源頭管理，將風險降低，做好食品安全管理才能提供安心產品。
         </p>
       </div>
         <div class="card04TextImg row">
-        <img src="~assets/social/4-pic-15.jpg" class="col-12 col-md-6">
-      <img src="~assets/social/4-pic-16.jpg" class="col-12 col-md-6">
+        <img src="~assets/social/4-pic-15.jpg" class="col-6 col-md-6">
+      <img src="~assets/social/4-pic-16.jpg" class="col-6 col-md-6">
     </div>
       </q-card-section>
       <img src="~assets/social/4-pic-17.jpg" class="col-12 col-md-4">

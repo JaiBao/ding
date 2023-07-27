@@ -1,57 +1,33 @@
 <template>
   <q-layout view="hHh lpR fff">
 
-    <q-header reveal bordered class="bg-black text-white" height-hint="98">
+    <q-header reveal bordered class="bg-black text-white" height-hint="100">
       <q-toolbar>
         <q-toolbar-title>
   <div class="titleLogo row" >
     <q-btn to="/">
     <img src="../assets/indexpic/0-pic-13.png"  to="/"></q-btn>
     <div class="gt-sm titleBtn row justify-center">
-      <q-tabs align="left">
+      <q-tabs align="left" v-model="$route.path" class="my-tabs">
         <q-btn-dropdown class="titleBtns" auto-close stretch flat label="關於鼎泰勝"         @mouseenter="openDropdown"
   @mouseleave="closeDropdown"
   v-model="dropdownVisible"  :class="{ 'dropdown-hovered': dropdownHovered || dropdownVisible }">
           <q-list class="gt-sm" @mouseenter="keepDropdownOpen" @mouseleave="closeDropdown">
-            <q-item clickable to="/overView">
-              <q-item-section>集團概述</q-item-section>
-            </q-item>
-            <q-item clickable to="/chronicle">
-              <q-item-section>集團事紀</q-item-section>
+            <q-item clickable to="/chronicle"
+            :class="{'selected': $route.path === '/chronicle'}">
+              <q-item-section>集團紀事</q-item-section>
             </q-item>
             <q-item clickable to="/vision">
               <q-item-section>願景與宗旨</q-item-section>
             </q-item>
           </q-list>
         </q-btn-dropdown>
+
         <q-btn-dropdown class="titleBtns" to="/news" label="最新消息" flat auto-close stretch/>
         <q-btn-dropdown class="titleBtns" to="/business" label="集團事業體" flat auto-close stretch/>
-        <!-- <q-btn-dropdown class="titleBtns" auto-close stretch flat  label="集團事業體" @mouseenter="openDropdown2"
-  @mouseleave="closeDropdown2"
-  v-model="dropdownVisible2"  :class="{ 'dropdown-hovered': dropdownHovered2 || dropdownVisible2 }">
-          <q-list
-          class="gt-sm" @mouseenter="keepDropdownOpen2" @mouseleave="closeDropdown2">
-            <q-item clickable @click="tab = '飲用水事業'">
-              <q-item-section>飲用水事業</q-item-section>
-            </q-item>
-
-            <q-item clickable @click="tab = '生技事業'">
-              <q-item-section>生技事業</q-item-section>
-            </q-item>
-            <q-item clickable @click="tab = '餐飲事業'">
-              <q-item-section>餐飲事業</q-item-section>
-            </q-item>
-            <q-item clickable @click="tab = '水酒事業'">
-              <q-item-section >水酒事業</q-item-section>
-            </q-item>
-            <q-item clickable @click="tab = '裝修工程事業'">
-              <q-item-section style="font-size: 11px;">裝修工程事業</q-item-section>
-            </q-item>
-          </q-list>
-        </q-btn-dropdown> -->
-        <q-btn-dropdown class="titleBtns" to="/social" label="企業社會責任" />
-        <q-btn-dropdown class="titleBtns" to="/recruit" label="人才招募" />
-        <q-btn-dropdown class="titleBtns" to="/message" label="聯絡我們" />
+        <q-btn-dropdown class="titleBtns" to="/social" label="企業社會責任" flat auto-close stretch />
+        <q-btn-dropdown class="titleBtns" to="/recruit" label="人才招募" flat auto-close stretch />
+        <q-btn-dropdown class="titleBtns" to="/message" label="聯絡我們" flat auto-close stretch/>
       </q-tabs>
     </div>
   </div>
@@ -63,91 +39,43 @@
 <!-- 漢堡 -->
     <q-drawer  v-model="rightDrawerOpen" side="right" behavior="mobile" bordered class="bg-black text-white"  width="200">
       <q-tabs vertical align="left" >
-        <div class="column">
+        <div class="column ">
 
           <q-btn
         class="q-my-md drawerBtns"
-        stretch flat label="關於鼎泰勝"
+        stretch flat
+        label="關於鼎泰勝"
         @click="showSubmenu = !showSubmenu"
-        />
+        style="line-height: 1.15em;min-height: 0.572em;">
+       <q-icon  style="color:white" :name="showSubmenu ? 'expand_more' : 'chevron_right'"/>
+      </q-btn>
 
         <q-collapse class="bg-grey column items-center justify-center" v-if="showSubmenu">
 
           <q-btn
           class="q-my-md drawerBtns"
-          clickable to="/overView"
-          stretch flat label="集團概述"
-          @click="showSubmenu = false"
-          />
-
-          <q-btn
-          class="q-my-md drawerBtns"
           clickable to="/chronicle"
-          stretch flat label="集團事紀"
+          stretch flat label="集團紀事"
           @click="showSubmenu = false"
-          />
+          style="line-height: 1.15em;min-height: 0.572em;" />
 
           <q-btn
           class="q-my-md drawerBtns"
           clickable to="/vision"
           auto-close stretch flat label="願景與宗旨"
           @click="showSubmenu = false"
-          />
+          style="line-height: 1.15em;min-height: 0.572em;" />
 
         </q-collapse>
 
-        <q-btn-dropdown
-        class="q-my-md drawerBtns" to="/news" label="最新消息" flat auto-close stretch/>
-        <q-btn-dropdown
-        class="q-my-md drawerBtns" to="/business" label="集團事業體" flat auto-close stretch/>
-        <!-- <q-btn
-        class="q-my-md drawerBtns"
-        stretch flat label="集團事業體"
-        @click="showSubmenu2 = !showSubmenu2"
-        />
+        <q-btn
+        class="q-my-md drawerBtns" to="/news" label="最新消息" flat auto-close stretch style="line-height: 1.15em;min-height: 0.572em;"/>
+        <q-btn
+        class="q-my-md drawerBtns" to="/business" label="集團事業體" flat auto-close stretch style="line-height: 1.15em;min-height: 0.572em;"/>
 
-        <q-collapse class="bg-grey column items-center justify-center" v-if="showSubmenu2">
-
-          <q-btn
-          class="q-my-md drawerBtns"
-          clickable to="/#"
-          stretch flat label="飲用水事業"
-          @click="showSubmenu2 = false"
-          />
-
-          <q-btn
-          class="q-my-md drawerBtns"
-          clickable to="/#"
-          stretch flat label="生技事業"
-          @click="showSubmenu2 = false"
-          />
-
-          <q-btn
-          class="q-my-md drawerBtns"
-          clickable to="/#"
-          auto-close stretch flat label="餐飲事業"
-          @click="showSubmenu2 = false"
-          />
-          <q-btn
-          class="q-my-md drawerBtns"
-          clickable to="/#"
-          auto-close stretch flat label="水酒事業"
-          @click="showSubmenu2 = false"
-          />
-          <q-btn
-          class="q-my-md drawerBtns"
-          clickable to="/#"
-          auto-close stretch flat label="裝修工程事業"
-          @click="showSubmenu2 = false"
-          />
-
-        </q-collapse> -->
-
-        <q-btn-dropdown         class="q-my-md drawerBtns" to="/social" label="企業社會責任" />
-        <q-btn-dropdown         class="q-my-md drawerBtns" to="/recruit" label="人才招募" />
-        <q-btn-dropdown         class="q-my-md drawerBtns" to="/message" label="聯絡我們" />
-        <q-btn class="drawerBtns"   @click="toggleRightDrawer" >關閉<i class="fa-sharp fa-light fa-x" style="color: #ffffff;"></i>
-          </q-btn>
+        <q-btn       class="q-my-md drawerBtns" to="/social" label="企業社會責任" style="line-height: 1.15em;min-height: 0.572em;" />
+        <q-btn        class="q-my-md drawerBtns" to="/recruit" label="人才招募" style="line-height: 1.15em;min-height: 0.572em;" />
+        <q-btn        class="q-my-md drawerBtns" to="/message" label="聯絡我們" style="line-height: 1.15em;min-height: 0.572em;" />
 
     </div></q-tabs>
     </q-drawer>
@@ -161,15 +89,20 @@
       <q-toolbar>
         <q-toolbar-title>
           <div class="footer_area ">
-            <div class="contactUs  col-12 col-md-3 col-sm-6">
+            <div class="contactUs  col-12 col-md-2 col-sm-6">
                 <h5>關於鼎泰勝</h5>
-                <ul>
-                  <li><router-link to="/overView">集團概述</router-link></li>
-                    <li><router-link to="/chronicle">集團事紀</router-link></li>
+
+                  <!-- <li><router-link to="/overView">集團概述</router-link></li> -->
+                    <li><router-link to="/chronicle">集團紀事</router-link></li>
                     <li><router-link to="/vision">願景與宗旨</router-link></li>
-                </ul>
+
             </div>
-            <div class="contactUs col-12 col-md-3 col-sm-6">
+
+            <div class="contactUs col-12 col-md-2 col-sm-6">
+              <router-link to="/news"> <h5>最新消息</h5></router-link>
+
+            </div>
+            <div class="contactUs col-12 col-md-2 col-sm-6">
               <router-link to="/business"><h5>集團事業體</h5></router-link>
                 <!-- <h5>集團事業體</h5>
                 <ul>
@@ -181,14 +114,14 @@
                     <li><a href="#">裝修工程事業</a></li>
                 </ul> -->
             </div>
-            <div class="contactUs col-12 col-md-3 col-sm-6">
+            <div class="contactUs col-12 col-md-2 col-sm-6">
               <router-link to="/social"><h5>企業社會責任</h5></router-link>
             </div>
-            <div class="contactUs col-12 col-md-3 col-sm-6">
+            <div class="contactUs col-12 col-md-2 col-sm-6">
               <router-link to="/recruit"> <h5>人才招募</h5></router-link>
 
             </div>
-            <div class="contactUs col-12 col-md-3 col-sm-6">
+            <div class="contactUs col-12 col-md-2 col-sm-6">
               <router-link to="/message"> <h5>聯絡我們</h5></router-link>
 
             </div>
@@ -210,10 +143,12 @@
 <div class="row q-mt-md">
    <div class="copyright col-12">
     <div class="copyrightLogo col-md-6 col-12">
-  <img  src="../assets/indexpic/0-pic-13.png" ></div>
-  <div class="copyrightText " style="max-width: 600px;margin-left: 3%;"><h6>
-    Copyright© 2023 鼎泰勝國際股份有限公司著作權所有 <br>隱私權與政策| Cookie政策
-  </h6>
+  <img  src="../assets/indexpic/0-pic-13.png" >
+</div>
+  <div class="copyrightText " ><p>
+    Copyright© 2023 鼎泰勝國際股份有限公司著作權所有<span class="gt-xs"> | </span> <router-link to="/privacy" class="custom-link">隱私權政策</router-link> <br>
+    241新北市三重光復路二段69號18樓 | (02) 2278-2325
+  </p>
 
   </div>
 </div>
@@ -227,13 +162,17 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { onMounted, onUpdated, nextTick, ref } from 'vue'
+
+import AOS from 'src/boot/aos'
+
 const dropdownHovered = ref(false)
 const dropdownVisible = ref(false)
 // const dropdownHovered2 = ref(false)
 // const dropdownVisible2 = ref(false)
 const rightDrawerOpen = ref(false)
 const showSubmenu = ref(false)
+
 // const showSubmenu2 = ref(false)
 let closeDropdownTimeout = null
 const toggleRightDrawer = () => {
@@ -273,6 +212,17 @@ function keepDropdownOpen () {
 //   }, 200) // 延遲 200 毫秒
 // }
 
+onMounted(async () => {
+  await nextTick()
+  AOS.init()
+  AOS.refresh()
+})
+
+onUpdated(async () => {
+  await nextTick()
+  AOS.refresh()
+})
+
 </script>
 
 <style lang="scss" scoped>
@@ -283,7 +233,8 @@ function keepDropdownOpen () {
 }
 
 .footer_area {
-  max-width: 1440px;
+  // max-width: 1440px;
+  width: 65%;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -300,14 +251,16 @@ function keepDropdownOpen () {
 .footer_area .contactUs ul {
   padding: 0;
   list-style: none;
+
 }
 
 .footer_area .contactUs a {
   text-decoration: none;
   color: #fff;
   font-family: 'Montserrat', sans-serif, Arial, sans-serif;
-  font-size: 14px;
-  margin-left: 22px;
+  font-size: 1rem;
+  text-align: center;
+  // margin-left: 22px;
 
   display: block;
 }
@@ -317,7 +270,7 @@ function keepDropdownOpen () {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin:0 60px 40px 60px;
+
   @media (max-width:996px){
 
   margin: auto;
@@ -325,7 +278,8 @@ function keepDropdownOpen () {
 
 h5{
   margin-bottom:5px;
-  // font-weight: border;
+  font-size: 1rem;
+  font-weight: 500;
   i{
     margin: 5px;
   }
@@ -334,16 +288,24 @@ h5{
 li {
     margin-bottom: 5px;
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     max-width: 100%;
+    font-size: 1rem;
+    @media(min-width:996px){
+      align-items: flex-start;
+    }
   }
 }
 
 .copyright {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+
     @media (max-width:996px){
   display:flex;
   flex-direction: column;
@@ -351,14 +313,19 @@ li {
   align-items: center;
 }
   img{
-    width:400px;
-    @media (min-width:768px){
-      border-right: #dc1a04 5px solid;padding-right: 3%;
+    width:230px;
+
+    @media (min-width:996px){
+      width:300px;
+
+      padding-right: 7%;
+
 }
 
 }
 .copyrightLogo{
   @media (max-width:996px){
+    padding-bottom: 2%;
     img{
       max-width:100%;
     }
@@ -369,11 +336,21 @@ li {
   align-items: center;
 }}
 .copyrightText{
+  // max-width: 600px;
+  height: 100%;
+  p{
+    padding-left: 4%;
+    font-size: 0.9rem;
+    line-height: 1rem;
+    border-left: #dc1a04 3px solid;
+    margin: 0;
+  }
   @media (max-width:996px){
-    h6{
+    p{
       font-size: 14px;
       white-space:pre-wrap;
       width:100%;
+      border-left:none
 
     }
   display:flex;
@@ -394,22 +371,22 @@ li {
 .titleLogo{
   display: flex;margin-left: 5%; align-items: center;
   img{
-    width: 250px;
+    width: 220px;
   }
   .titleBtn{
     margin-left: 20%;
         .titleBtns{
-        font-size: 20px;
+        font-size: 1rem;
       }
   }
   @media (max-width: 1440px){
     img{
-    width: 250px;
+    width: 210px;
   }
     .titleBtn{
     margin-left: 9%;
         .titleBtns{
-        font-size: 20px;
+        font-size: 1rem;
       }
   }
 
@@ -421,7 +398,7 @@ li {
     .titleBtn{
     margin-left: 2%;
         .titleBtns{
-        font-size: 20px;
+        font-size: 1rem;
       }
   }
 
@@ -433,7 +410,7 @@ li {
     .titleBtn{
     margin-left: 2%;
         .titleBtns{
-        font-size: 16px;
+        font-size: 0.9rem;
       }
   }
 
@@ -441,7 +418,14 @@ li {
 
 }
 .drawerBtns{
-  font-size: 20px;
+  font-size: 1rem;
+  font-weight: 100;
+  // text-align: center;
+}
+
+.custom-link {
+  color: inherit; /* 使用父元素的顏色 */
+  text-decoration: none; /* 取消下劃線 */
 }
 
 </style>

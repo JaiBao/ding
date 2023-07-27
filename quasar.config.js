@@ -63,7 +63,7 @@ module.exports = configure(function (/* ctx */) {
         '@': path.join(__dirname, './src')
       },
 
-      vueRouterMode: 'hash', // available values: 'hash', 'history'
+      vueRouterMode: 'history', // available values: 'hash', 'history'
       // vueRouterBase,
       // vueDevtools,
       // vueOptionsAPI: false,
@@ -129,7 +129,8 @@ module.exports = configure(function (/* ctx */) {
         'Dialog',
         'QCarousel',
         'QCarouselSlide ',
-        'QCarouselControl '
+        'QCarouselControl ',
+        'Meta'
       ]
     },
 

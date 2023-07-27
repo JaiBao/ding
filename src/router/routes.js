@@ -9,25 +9,25 @@ const routes = [
         path: '/',
         component: () => import('src/pages/IndexPage.vue'),
         meta: {
-          title: '首頁',
+          title: '鼎泰勝集團',
           login: false,
           admin: false
         }
       },
-      {
-        path: '/overView',
-        component: () => import('src/pages/OverViewPage.vue'),
-        meta: {
-          title: '概述',
-          login: false,
-          admin: false
-        }
-      },
+      // {
+      //   path: '/overView',
+      //   component: () => import('src/pages/OverViewPage.vue'),
+      //   meta: {
+      //     title: '鼎泰勝集團概述',
+      //     login: false,
+      //     admin: false
+      //   }
+      // },
       {
         path: '/chronicle',
         component: () => import('src/pages/chroniclePage.vue'),
         meta: {
-          title: '紀事',
+          title: '鼎泰勝集團紀事',
           login: false,
           admin: false
         }
@@ -36,7 +36,43 @@ const routes = [
         path: '/vision',
         component: () => import('src/pages/visionPage.vue'),
         meta: {
-          title: '願景',
+          title: '鼎泰勝集團願景',
+          login: false,
+          admin: false
+        }
+      },
+      {
+        path: '/newsContent1',
+        component: () => import('src/pages/newsContent.vue'),
+        meta: {
+          title: '最新消息',
+          login: false,
+          admin: false
+        }
+      },
+      {
+        path: '/newsContent2',
+        component: () => import('src/pages/newsContent2.vue'),
+        meta: {
+          title: '最新消息',
+          login: false,
+          admin: false
+        }
+      },
+      {
+        path: '/newsContent3',
+        component: () => import('src/pages/newsContent3.vue'),
+        meta: {
+          title: '最新消息',
+          login: false,
+          admin: false
+        }
+      },
+      {
+        path: '/privacy',
+        component: () => import('src/pages/privacyPage.vue'),
+        meta: {
+          title: '鼎泰勝集團隱私權政策',
           login: false,
           admin: false
         }
@@ -45,7 +81,7 @@ const routes = [
         path: '/news',
         component: () => import('src/pages/newsPage.vue'),
         meta: {
-          title: '最新消息',
+          title: '鼎泰勝集團最新消息',
           login: false,
           admin: false
         }
@@ -54,7 +90,7 @@ const routes = [
         path: '/social',
         component: () => import('src/pages/socialPage.vue'),
         meta: {
-          title: '企業社會責任',
+          title: '鼎泰勝集團企業社會責任',
           login: false,
           admin: false
         }
@@ -63,7 +99,7 @@ const routes = [
         path: '/recruit',
         component: () => import('src/pages/recruitPage.vue'),
         meta: {
-          title: '人才招募',
+          title: '鼎泰勝集團人才招募',
           login: false,
           admin: false
         }
@@ -72,7 +108,7 @@ const routes = [
         path: '/message',
         component: () => import('src/pages/sendMessage.vue'),
         meta: {
-          title: '聯絡我們',
+          title: '鼎泰勝集團聯絡我們',
           login: false,
           admin: false
         }
@@ -81,7 +117,7 @@ const routes = [
         path: '/business',
         component: () => import('src/pages/businessPage.vue'),
         meta: {
-          title: '集團事業體',
+          title: '鼎泰勝集團集團事業體',
           login: false,
           admin: false
         }

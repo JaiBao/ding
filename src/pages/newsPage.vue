@@ -1,21 +1,22 @@
 <template>
+
   <q-page>
     <!-- 大圖視差 -->
 
 <div class=" full-width pageParallax" >
 <q-parallax
   src="~assets/news/2-pic-1.jpg"
->
+ >
 <div class="absolute-left-center custom-caption2">
 
         <div class="text-black text-h2 alight-center" >最新消息</div>
-      <div class="text-grey text-h5 alight-center" >News</div>
+      <div class="text-grey text-h6 alight-center" >News</div>
     </div>
 </q-parallax>
 </div>
 <!-- table區 -->
 <div class="row justify-center" >
-  <div class="q-pa-md row justify-end newsSearch">
+  <!-- <div class="q-pa-md row justify-end newsSearch">
     <q-select v-model="selectedTime" :options="times"  clearable
     @clear="selectedTime = defaultTime"
     option-label="label"
@@ -34,20 +35,20 @@
     <q-icon name="search" class="search-icon" />
   </template>
     </q-input>
-    </div>
+    </div> -->
 
     <div v-for="card in currentPageCards" :key="card.id" class="q-ma-md row justify-center" data-aos="fade-up" data-aos-duration="2000">
       <q-card class="newsPageCard">
-        <q-card-section class=" gutter-xs q-gutter-xl newsPageCard2" horizontal>
-            <img :src="card.image" class="col-12 col-md-3 newsPageImg" >
+        <q-card-section class=" newsPageCard2" horizontal>
+            <img :src="card.image" class="col-12 col-md-4 newsPageImg" >
             <div class="col-12 col-md-8 newsPageText">
               <div class="newsTime">{{ card.time }}</div>
-              <div class="newsTitle">{{ card.businessType }}|{{ card.title }} </div>
+              <div class="newsTitle">{{ card.businessType }} | {{ card.title }} </div>
               <div class="newsContent">{{ card.content }}</div>
               <div class="row justify-end items-end align-end">
                 <q-btn
                 rounded
-                class="newsPageBtn q-ma-md">more...</q-btn>
+                class="newsPageBtn q-ma-md" :to="'/newsContent' + card.id">more...</q-btn>
               </div>
             </div>
         </q-card-section>
@@ -91,41 +92,41 @@
 </template>
 <script setup>
 import { ref, computed, watch, nextTick } from 'vue'
-function generateTimeRange (startMonth, endMonth) {
-  const startDate = new Date(startMonth)
-  const endDate = new Date(endMonth)
+// function generateTimeRange (startMonth, endMonth) {
+//   const startDate = new Date(startMonth)
+//   const endDate = new Date(endMonth)
 
-  const times = []
-  let currentMonth = startDate
-  while (currentMonth <= endDate) {
-    const start = formatDate(currentMonth)
-    const nextMonth = new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 1, 1)
-    const end = formatDate(new Date(Math.min(nextMonth, endDate)))
-    const label = getLabel(start, end)
-    times.push({ start, end, label })
-    currentMonth = nextMonth
-  }
+//   const times = []
+//   let currentMonth = startDate
+//   while (currentMonth <= endDate) {
+//     const start = formatDate(currentMonth)
+//     const nextMonth = new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 1, 1)
+//     const end = formatDate(new Date(Math.min(nextMonth, endDate)))
+//     const label = getLabel(start, end)
+//     times.push({ start, end, label })
+//     currentMonth = nextMonth
+//   }
 
-  return times
-}
+//   return times
+// }
 
-function formatDate (date) {
-  const year = date.getFullYear()
-  const month = String(date.getMonth() + 1).padStart(2, '0')
-  const day = String(date.getDate()).padStart(2, '0')
-  return `${year}/${month}/${day}`
-}
+// function formatDate (date) {
+//   const year = date.getFullYear()
+//   const month = String(date.getMonth() + 1).padStart(2, '0')
+//   const day = String(date.getDate()).padStart(2, '0')
+//   return `${year}/${month}/${day}`
+// }
 
-function getLabel (start, end) {
-  const startYear = new Date(start).getFullYear()
-  const startMonth = new Date(start).getMonth() + 1
+// function getLabel (start, end) {
+//   const startYear = new Date(start).getFullYear()
+//   const startMonth = new Date(start).getMonth() + 1
 
-  return `${startYear}年 ${startMonth}月`
-}
+//   return `${startYear}年 ${startMonth}月`
+// }
 
-const times = generateTimeRange('2023/01/01', '2025/12/31')
-// console.log(times)
-const businessTypes = ['餐飲事業', '生技事業', '餐飲事業', '影視事業', '水酒事業', '裝修工程事業']
+// const times = generateTimeRange('2023/01/01', '2025/12/31')
+// // console.log(times)
+// const businessTypes = ['餐飲事業', '生技事業', '餐飲事業', '影視事業', '水酒事業', '裝修工程事業']
 
 const defaultTime = { start: null, end: null, label: '時間選擇' }
 const selectedTime = ref(defaultTime)
@@ -143,51 +144,28 @@ const cards = ref([
   {
     id: 1,
     image: '/news/2-pic-2.jpg',
-    time: '2023/05/15',
-    title: '香臨食品南部分公司成立',
+    time: '2023/06/26',
+    title: '中華一餅服務據點搬遷，新門市占地大，服務產能增！',
     businessType: '餐飲事業',
-    content: '鼎泰勝集團旗下香臨食品，正式成立南部分公司，專營水酒事業營運與門市銷售。新南部分公司坐落於高雄，地點選擇鄰近高雄巨蛋捷運站，提供熱情的南台灣鄉親好友們有別於餐飲服務外酒水業務'
+    content: '鼎泰勝集團旗下香臨食品所經營之「中華一餅」，六月門市正式搬遷。新門市坐落於成功國宅附近，占地坪數大，加上作業動線流暢，預計將提高兩成的生產量能。'
   },
   {
     id: 2,
     image: '/news/2-pic-3.jpg',
     time: '2023/04/20',
-    title: '森淋泉生技飲用水設備全面化升級、熱銷水產品新裝登場',
+    title: '水泉水生技飲用水設備全面化升級、熱銷水產品新裝登場',
     businessType: '飲用水事業',
-    content: '鼎泰勝集團旗下森淋泉生技為提升2023年度生產量目標，今年特購全新機台進行汰舊換新作業，全新飲用水設備預期將提高生產品質，同時提高供作業產能，將產能發揮到最大！此外熱銷瓶裝水產品，也在本月份新登場。'
+    content: '鼎泰勝集團旗下水泉水生技為提升2023年度生產量目標，今年特購全新機台進行汰舊換新作業，全新飲用水設備預期將提高生產品質，同時提高作業產能，將產能發揮到最大！此外熱銷瓶裝水產品，也在本月份新登場。'
   },
   {
     id: 3,
     image: '/news/2-pic-4.jpg',
     time: '2022/10/17',
-    title: ' 鼎泰勝集團總部喬遷，進駐群光大樓',
-    businessType: '集團總部 ',
+    title: '鼎泰勝集團總部喬遷，進駐群光大樓',
+    businessType: '集團總部',
     content: '鼎泰勝集團旗總部團隊擴編，同時因應未來市場的擴充需求，於本2022年10月7日正式進駐群光大樓。總部辦公室全面整合各事業體的後勤團隊，將集團部門團隊整合，讓夥伴們更能團結一致，創造總部團隊價值！'
-  },
-  {
-    id: 4,
-    image: '/news/2-pic-3.jpg',
-    time: '2023/08/15',
-    title: '香臨2323232',
-    businessType: '餐飲事業',
-    content: '内容2'
-  },
-  {
-    id: 5,
-    image: '/news/2-pic-2.jpg',
-    time: '2023/09/15',
-    title: '標題3',
-    businessType: '類型3',
-    content: '内容3'
-  },
-  {
-    id: 6,
-    image: '/news/2-pic-4.jpg',
-    time: '2023/04/20',
-    title: '森淋泉生技飲用水設備全面化升級、熱銷水產品新裝登場',
-    businessType: '飲用水事業',
-    content: '内容2'
   }
+
 ])
 
 const filteredCards = computed(() => {
