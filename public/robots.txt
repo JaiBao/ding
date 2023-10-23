@@ -1,0 +1,9 @@
+user-agent: *
+disallow: /privacy
+disallow: /newsContent1
+disallow: /newsContent2
+disallow: /newsContent3
+disallow: /newsContent4
+disallow: /socialOld
+
+
