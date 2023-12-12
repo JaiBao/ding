@@ -10,7 +10,7 @@
             <div class="gt-sm titleBtn">
               <q-tabs align="left" v-model="$route.path" class="my-tabs">
                 <q-btn-dropdown
-                  :class="{ active: isActiveAbout, titleBtns: true, isList: dropdownVisible }"
+                  :class="tabContentClass"
                   auto-close
                   stretch
                   flat
@@ -229,6 +229,11 @@ function keepDropdownOpen() {
   dropdownVisible.value = true
   dropdownHovered.value = true
 }
+const tabContentClass = computed(() => ({
+  active: isActiveAbout.value,
+  'dropdown-visible': dropdownVisible.value,
+  'dropdown-hovered': dropdownHovered.value
+}))
 </script>
 
 <style lang="scss" scoped>
@@ -261,7 +266,7 @@ function keepDropdownOpen() {
   list-style: none;
 }
 .l-line {
-  width: 240px;
+  width: 100%;
   height: 1px;
   margin: 18px 0;
   background: linear-gradient(90deg, rgba(217, 217, 217, 0) 0%, #d9d9d9 57.29%, rgba(217, 217, 217, 0) 100%);

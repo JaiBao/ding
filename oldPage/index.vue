@@ -172,15 +172,13 @@
             <p>Foodservice Business</p>
 
             <br />
-            <div class="row">
-              <!-- <img src="/overView/0-pic-14.png" alt="上暉食品" > -->
-              <img src="/overView/0-pic-15.png" alt="香臨食品" />
-            </div>
+            <img src="/overView/0-pic-15.png" alt="香臨食品" />
           </div>
           <div class="image-content">
             <img src="/overView/0-pic-9.jpg" alt="水酒事業" />
           </div>
         </q-card>
+
         <!-- 4 -->
         <q-card
           class="news col-md-4 col-sm-6 image-card"
@@ -287,10 +285,7 @@
             <p>Foodservice Business</p>
 
             <br />
-            <div class="row">
-              <!-- <img src="/overView/0-pic-14.png" alt="上暉食品" > -->
-              <img src="/overView/0-pic-15.png" alt="香臨食品" />
-            </div>
+            <img src="/overView/0-pic-15.png" alt="香臨食品" />
           </div>
           <div class="image-content">
             <img src="/overView/0-pic-9.jpg" alt="水酒事業" />

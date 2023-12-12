@@ -172,10 +172,8 @@
             <p>Foodservice Business</p>
 
             <br />
-            <div class="row">
-              <!-- <img src="/overView/0-pic-14.png" alt="上暉食品" > -->
-              <img src="/overView/0-pic-15.png" alt="香臨食品" />
-            </div>
+
+            <img src="/overView/0-pic-15.png" alt="香臨食品" />
           </div>
           <div class="image-content">
             <img src="/overView/0-pic-9.jpg" alt="水酒事業" />
@@ -309,10 +307,8 @@
             <p>Foodservice Business</p>
 
             <br />
-            <div class="row">
-              <!-- <img src="/overView/0-pic-14.png" alt="上暉食品" > -->
-              <img src="/overView/0-pic-15.png" alt="香臨食品" />
-            </div>
+
+            <img src="/overView/0-pic-15.png" alt="香臨食品" />
           </div>
           <div class="image-content">
             <img src="/overView/0-pic-9.jpg" alt="水酒事業" />
@@ -449,37 +445,38 @@ const cardRefs = {
   card10: ref(null)
 }
 const contRef = ref(null)
-// const card1 = ref(null)
-// const card2 = ref(null)
-// const card3 = ref(null)
-// const card4 = ref(null)
-// const card5 = ref(null)
-// const card6 = ref(null)
-// const card7 = ref(null)
-// const card8 = ref(null)
-// const card9 = ref(null)
-// const card10 = ref(null)
+// 全局範圍變量，用於滾動目標
+let scrollLeftTarget = ref(0)
 
+// 全局範圍函數，用於處理滾動事件
+const onScroll = () => {
+  const contEl = contRef.value
+  if (contEl && Math.abs(contEl.scrollLeft - scrollLeftTarget.value) < 5) {
+    // 滾動到目標範圍內，添加 'paused' 類
+    contEl.classList.add('paused')
+    // 移除滾動事件監聽器
+    contEl.removeEventListener('scroll', onScroll)
+  }
+}
+
+// 定義滾動到卡片中央的函數
 const scrollToCenter = cardKey => {
   const cardEl = cardRefs[cardKey].value
   const contEl = contRef.value
   if (cardEl && contEl) {
+    // 計算容器中央和卡片中央
     const contCenter = contEl.offsetWidth / 2
     const cardCenter = cardEl.offsetWidth / 2
+    // 計算滾動目標位置
     const offsetLeft = cardEl.offsetLeft
-    const scrollLeftTarget = offsetLeft - contCenter + cardCenter
+    scrollLeftTarget.value = offsetLeft - contCenter + cardCenter // 更新 scrollLeftTarget
 
-    const onScroll = () => {
-      if (Math.abs(contEl.scrollLeft - scrollLeftTarget) < 5) {
-        // 当滚动到目标附近时
-        contEl.classList.add('paused')
-        contEl.removeEventListener('scroll', onScroll) // 移除滚动事件监听器
-      }
-    }
+    // 添加滾動事件監聽器
     contEl.addEventListener('scroll', onScroll)
 
+    // 執行滾動
     contEl.scroll({
-      left: scrollLeftTarget,
+      left: scrollLeftTarget.value,
       behavior: 'smooth'
     })
   }
@@ -493,42 +490,6 @@ const handleCardLeave = () => {
   contRef.value.classList.remove('paused')
 }
 
-// const scrollToCenter = async (cardRefName) => {
-//   await nextTick() // 確保DOM已經更新
-//   const card = ref[cardRefName].value
-//   const cont = contRef.value
-//   const cardRect = card.getBoundingClientRect()
-//   const contRect = cont.getBoundingClientRect()
-
-//   const centerPosition = cont.scrollLeft + cardRect.left + cardRect.width / 2 - contRect.width / 2
-//   cont.scrollTo({ left: centerPosition, behavior: 'smooth' })
-// }
-
-// const handleCardHover = (event) => {
-//   const card = event.currentTarget // 獲取當前的卡片元素
-
-//   // 檢查這張卡片是否在視口的中央
-//   const cardMiddle = card.offsetLeft + (card.offsetWidth / 2)
-//   const containerMiddle = contRef.value.offsetWidth / 2
-
-//   // 判斷卡片的中央是否在容器的中央
-//   if (cardMiddle === containerMiddle) {
-//     // 如果是，則暫停滾動
-//     contRef.value.style.animationPlayState = 'paused'
-//   } else {
-//     // 如果不是，則繼續滾動，直到卡片的中央到達容器的中央
-//     const scrollAmount = cardMiddle - containerMiddle
-//     contRef.value.scrollBy({ left: scrollAmount, behavior: 'smooth' })
-
-//     // 監聽滾動事件，一旦滾動停止，停止動畫
-//     contRef.value.addEventListener('scroll', function checkScroll () {
-//       if (contRef.value.scrollLeft === card.offsetLeft) {
-//         contRef.value.style.animationPlayState = 'paused'
-//         contRef.value.removeEventListener('scroll', checkScroll)
-//       }
-//     })
-//   }
-// }
 const ends = [800000, 2000, 1000, 200000, 9600000]
 const counters = ends.map(end => ref(0))
 
@@ -559,6 +520,11 @@ onUnmounted(() => {
   rafIds.forEach((rafId, index) => {
     cancelAnimationFrame(rafId)
   })
+
+  const contEl = contRef.value
+  if (contEl) {
+    contEl.removeEventListener('scroll', onScroll)
+  }
 })
 // 新增的格式化函數
 const formatNumber = number => {
@@ -1302,7 +1268,8 @@ const formatNumber = number => {
       font-size: 18px;
     }
     img {
-      width: 140px;
+      width: 40%;
+      object-fit: contain;
     }
   }
 }

@@ -198,8 +198,8 @@ const iconsData = [
     content2: '我們擁有ISO 22000和HACCP雙重認證，提供安心的瓶裝水。我們擁有ISO 22000和HACCP雙重認證，提供安心的瓶裝水。',
     content4:
       '純淨水源的「世間水」水廠，位於台灣三大冷泉之一的彰化快官冷泉處，地處環境清幽純淨，水質未受任何汙染，保留住水質的甘醇度。嚴謹的製作與品管，榮獲ISO 22000與HACCP國家級的雙重認證，提供消費者安心無虞甘醇的瓶裝水。',
-    img: '/business/worldImg.png'
-    // link: 'https://www.facebook.com/iamsxb/?locale=zh_TW'
+    img: '/business/worldImg.png',
+    link: 'https://www.springwater.tw/world'
   },
   // {
   //   id: 'xlin',
