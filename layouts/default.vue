@@ -139,8 +139,9 @@
                   <img src="/test/05-Logo.png" />
                 </a>
                 <div class="l-line gt-xs"></div>
-
-                <img src="/test/04-Logo.png" />
+                <a href="https://www.springwater.tw/world" target="_bank">
+                  <img src="/test/04-Logo.png" />
+                </a>
 
                 <div class="l-line"></div>
 
