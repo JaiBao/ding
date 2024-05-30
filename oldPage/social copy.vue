@@ -7,8 +7,8 @@
         <div class="socialContainerTitle">
           <h4>灌溉養份的種子用良心做事</h4>
           <h4>為社會奉獻！</h4>
-          <img src="/test/paper.png" class="gt-sm" />
-          <img src="/test/titleApp.png" class="lt-md" />
+          <NuxtImg format="webp" src="/test/paper.png" class="gt-sm" />
+          <NuxtImg format="webp" src="/test/titleApp.png" class="lt-md" />
         </div>
       </div>
       <!-- 文章欄位 -->
@@ -22,23 +22,23 @@
         <div class="socialImage q-ma-md">
           <div class="row center-align">
             <div class="col-4 column justify-center items-center col-md-2">
-              <img ref="icon2" src="/social/4-pic-2.png" />
+              <NuxtImg format="webp" ref="icon2" src="/social/4-pic-2.png" />
               <p>親子關懷</p>
             </div>
             <div class="col-4 column justify-center items-center col-md-2">
-              <img ref="icon3" src="/social/4-pic-3.png" />
+              <NuxtImg format="webp" ref="icon3" src="/social/4-pic-3.png" />
               <p>醫護支持</p>
             </div>
             <div class="col-4 column justify-center items-center col-md-2">
-              <img ref="icon4" src="/social/4-pic-4.png" />
+              <NuxtImg format="webp" ref="icon4" src="/social/4-pic-4.png" />
               <p>教育推動</p>
             </div>
             <div class="col-4 column justify-center items-center col-md-2">
-              <img ref="icon5" src="/social/4-pic-5.png" />
+              <NuxtImg format="webp" ref="icon5" src="/social/4-pic-5.png" />
               <p>體育贊助</p>
             </div>
             <div class="col-4 column justify-center items-center col-md-2">
-              <img ref="icon6" src="/social/4-pic-6.png" />
+              <NuxtImg format="webp" ref="icon6" src="/social/4-pic-6.png" />
               <p>藝文推廣</p>
             </div>
           </div>
@@ -66,7 +66,7 @@
             </q-list>
           </div>
 
-          <img :src="currentImage" v-if="currentImage" />
+          <NuxtImg format="webp" :src="currentImage" v-if="currentImage" />
         </div>
       </div>
     </div>
@@ -97,7 +97,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: '/indexpic/0-pic-13.png' // 使用你的圖片路徑
+      content: 'https://www.dtstw.com/recruit/ogImage.png' // 使用你的圖片路徑
     },
     {
       property: 'og:image:alt',

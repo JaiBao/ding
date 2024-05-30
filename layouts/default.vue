@@ -5,7 +5,7 @@
         <q-toolbar-title>
           <div class="titleLogo row">
             <q-btn to="/">
-              <img src="/indexpic/0-pic-13.png" to="/" />
+              <NuxtImg format="webp" src="/indexpic/0-pic-13.png" to="/" />
             </q-btn>
             <div class="gt-sm titleBtn">
               <q-tabs align="left" v-model="$route.path" class="my-tabs">
@@ -36,7 +36,7 @@
                 <q-btn-dropdown :class="{ active: isActiveRecruit }" class="titleBtns" to="/recruit" label="人才招募" flat auto-close stretch />
                 <q-btn-dropdown :class="{ active: isActiveMessage }" class="titleBtns" to="/message" label="聯絡我們" flat auto-close stretch />
                 <a href="https://www.facebook.com/dingtaisheng?locale=zh_TW" target="_bank" style="cursor: pointer">
-                  <img src="/indexpic/facebook.svg" style="width: 45px; height: 45px" />
+                  <NuxtImg format="webp" src="/indexpic/facebook.svg" style="width: 45px; height: 45px" />
                 </a>
               </q-tabs>
             </div>
@@ -132,35 +132,35 @@
               <!-- <router-link to="/business"><h5>集團事業體</h5></router-link> -->
               <div class="businessIcon">
                 <a href="https://www.springwater.tw" target="_bank">
-                  <img src="/test/02-Logo.png" />
+                  <NuxtImg format="webp" src="/test/02-Logo.png" />
                 </a>
                 <div class="l-line gt-xs"></div>
-                <a href="https://www.facebook.com/iamsxb/?locale=zh_TW" target="_bank">
-                  <img src="/test/05-Logo.png" />
+                <a href="https://www.shanghuei.tw/" target="_bank">
+                  <NuxtImg format="webp" src="/test/05-Logo.png" />
                 </a>
                 <div class="l-line gt-xs"></div>
                 <a href="https://www.springwater.tw/world" target="_bank">
-                  <img src="/test/04-Logo.png" />
+                  <NuxtImg format="webp" src="/test/04-Logo.png" />
                 </a>
 
                 <div class="l-line"></div>
 
-                <img src="/test/01-Logo.png" />
+                <NuxtImg format="webp" src="/test/01-Logo.png" />
 
                 <div class="l-line gt-xs"></div>
-                <a href="https://www.instagram.com/staysolid4fam">
-                  <img src="/test/06-Logo.png" />
+                <a href="https://www.forfamworld.com/">
+                  <NuxtImg format="webp" src="/test/06-Logo.png" />
                 </a>
                 <div class="l-line gt-xs"></div>
                 <a href="https://www.chinabing.net" target="_bank">
-                  <img src="/test/03-Logo.png" />
+                  <NuxtImg format="webp" src="/test/03-Logo.png" />
                 </a>
                 <!-- <div class="bottom xs">
                   <a href="https://www.instagram.com/staysolid4fam">
-                    <img src="/test/06-Logo.png" />
+                    <NuxtImg format="webp" src="/test/06-Logo.png" />
                   </a>
 
-                  <img src="/test/01-Logo.png" />
+                  <NuxtImg format="webp" src="/test/01-Logo.png" />
                 </div> -->
               </div>
             </div>
@@ -169,7 +169,7 @@
           <div class="row q-mt-md">
             <div class="copyright col-12">
               <div class="copyrightLogo col-md-6 col-12">
-                <img src="/indexpic/0-pic-13.png" />
+                <NuxtImg format="webp" src="/indexpic/0-pic-13.png" />
               </div>
               <div class="copyrightText">
                 <p>

@@ -8,10 +8,10 @@
         <h5>{{slide.title}}</h5>
         <p>{{slide.subTitle}}</p>
         <br>
-        <img :src="slide.titleImage" :alt="slide.title">
+        <NuxtImg format="webp" :src="slide.titleImage" :alt="slide.title">
       </div>
       <div class="image-content">
-        <img :src="slide.contentImage" :alt="slide.title + ' Image'">
+        <NuxtImg format="webp" :src="slide.contentImage" :alt="slide.title + ' Image'">
       </div>
     </q-card>
     </div>

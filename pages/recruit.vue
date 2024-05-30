@@ -3,7 +3,7 @@
     <div class="recruitContent">
       <!-- 大圖視差 -->
       <div class="full-width recruitSection1">
-        <img class="section1Img" src="/recruit/5-pic-1.png" />
+        <NuxtImg format="webp" class="section1Img" src="/recruit/5-pic-1.png" />
         <div class="section1Title">
           <div class="titleContent">
             <h2>加入鼎泰勝</h2>
@@ -37,7 +37,7 @@
               "
               @mouseleave="handleCardLeave">
               <div class="image-content">
-                <img :src="card.imgSrc" :alt="card.altText" />
+                <NuxtImg format="webp" :src="card.imgSrc" :alt="card.altText" />
               </div>
             </q-card>
           </div>
@@ -46,8 +46,8 @@
       <!-- 加入我們 -->
       <div class="recruitSection3">
         <div class="section3Title">
-          <img class="gt-xs" src="/recruit/joinUsLine.png" />
-          <img class="lt-sm" src="/recruit/joinUsApp.png" />
+          <NuxtImg format="webp" class="gt-xs" src="/recruit/joinUsLine.png" />
+          <NuxtImg format="webp" class="lt-sm" src="/recruit/joinUsApp.png" />
         </div>
         <div class="section3Content">
           <!-- 加入按鈕區域 -->
@@ -127,7 +127,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: '/indexpic/0-pic-13.png' // 使用你的圖片路徑
+      content: 'https://www.dtstw.com/recruit/ogImage.png' // 使用你的圖片路徑
     },
     {
       property: 'og:image:alt',

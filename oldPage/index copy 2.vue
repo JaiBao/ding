@@ -2,7 +2,7 @@
   <q-page>
     <!-- banner -->
     <div class="full-width indexSection1">
-      <img class="section1Img" src="/overView/0-pic-1.jpg" />
+      <NuxtImg format="webp" class="section1Img" src="/overView/0-pic-1.jpg" />
       <div class="section1Title">
         <div class="titleContent">
           <h2>DING TAI SHENG</h2>
@@ -41,7 +41,7 @@
               <span>箱</span>
             </h4>
           </div>
-          <img src="/overView/0-pic-3.jpg" alt="飲用水事業" />
+          <NuxtImg format="webp" src="/overView/0-pic-3.jpg" alt="飲用水事業" />
         </div>
       </q-card>
       <div class="column col-md-4 col-sm-12 justify-between">
@@ -55,7 +55,7 @@
                 <span>件</span>
               </h4>
             </div>
-            <img src="/overView/0-pic-4.jpg" alt="裝修工程事業" />
+            <NuxtImg format="webp" src="/overView/0-pic-4.jpg" alt="裝修工程事業" />
           </div>
         </q-card>
         <q-card class="cardGroup col-6 column justify-end">
@@ -68,7 +68,7 @@
                 <span>部</span>
               </h4>
             </div>
-            <img src="/overView/0-pic-5.jpg" alt="影視創意事業" />
+            <NuxtImg format="webp" src="/overView/0-pic-5.jpg" alt="影視創意事業" />
           </div>
         </q-card>
       </div>
@@ -82,7 +82,7 @@
               <span>套</span>
             </h4>
           </div>
-          <img src="/overView/0-pic-6.jpg" alt="餐飲事業" />
+          <NuxtImg format="webp" src="/overView/0-pic-6.jpg" alt="餐飲事業" />
         </div>
       </q-card>
     </div>
@@ -109,10 +109,10 @@
             <p>Drinking Water Business</p>
 
             <br />
-            <img src="/overView/0-pic-13.png" alt="水泉水生技" />
+            <NuxtImg format="webp" src="/overView/0-pic-13.png" alt="水泉水生技" />
           </div>
           <div class="image-content">
-            <img src="/overView/0-pic-7.jpg" alt="飲用水事業" />
+            <NuxtImg format="webp" src="/overView/0-pic-7.jpg" alt="飲用水事業" />
           </div>
         </q-card>
 
@@ -132,10 +132,10 @@
             <p>Food Manufacturing</p>
 
             <br />
-            <img src="/overView/0-pic-14.png" alt="上暉食品" />
+            <NuxtImg format="webp" src="/overView/0-pic-14.png" alt="上暉食品" />
           </div>
           <div class="image-content">
-            <img src="/overView/0-pic-8.jpg" alt="食品製造業" s />
+            <NuxtImg format="webp" src="/overView/0-pic-8.jpg" alt="食品製造業" s />
           </div>
         </q-card>
         <!-- 3 -->
@@ -155,12 +155,12 @@
 
             <br />
             <div class="row">
-              <!-- <img src="/overView/0-pic-14.png" alt="上暉食品" > -->
-              <img src="/overView/0-pic-15.png" alt="香臨食品" />
+              <!-- <NuxtImg format="webp" src="/overView/0-pic-14.png" alt="上暉食品" > -->
+              <NuxtImg format="webp" src="/overView/0-pic-15.png" alt="香臨食品" />
             </div>
           </div>
           <div class="image-content">
-            <img src="/overView/0-pic-9.jpg" alt="水酒事業" />
+            <NuxtImg format="webp" src="/overView/0-pic-9.jpg" alt="水酒事業" />
           </div>
         </q-card>
         <!-- 4 -->
@@ -179,10 +179,10 @@
             <p>Media Studio</p>
 
             <br />
-            <img src="/overView/0-pic-16.png" alt="福汎國際" />
+            <NuxtImg format="webp" src="/overView/0-pic-16.png" alt="福汎國際" />
           </div>
           <div class="image-content">
-            <img src="/overView/0-pic-10.jpg" alt="影視事業" />
+            <NuxtImg format="webp" src="/overView/0-pic-10.jpg" alt="影視事業" />
           </div>
         </q-card>
 
@@ -202,10 +202,10 @@
             <p>Decoration Engineering Business</p>
 
             <br />
-            <img src="/overView/0-pic-18.png" alt="家荷工程)" />
+            <NuxtImg format="webp" src="/overView/0-pic-18.png" alt="家荷工程)" />
           </div>
           <div class="image-content">
-            <img src="/overView/0-pic-12.jpg" alt="裝修工程事業" />
+            <NuxtImg format="webp" src="/overView/0-pic-12.jpg" alt="裝修工程事業" />
           </div>
         </q-card>
         <!-- 1 -->
@@ -224,10 +224,10 @@
             <p>Drinking Water Business</p>
 
             <br />
-            <img src="/overView/0-pic-13.png" alt="水泉水生技" />
+            <NuxtImg format="webp" src="/overView/0-pic-13.png" alt="水泉水生技" />
           </div>
           <div class="image-content">
-            <img src="/overView/0-pic-7.jpg" alt="飲用水事業" />
+            <NuxtImg format="webp" src="/overView/0-pic-7.jpg" alt="飲用水事業" />
           </div>
         </q-card>
 
@@ -247,10 +247,10 @@
             <p>Food Manufacturing</p>
 
             <br />
-            <img src="/overView/0-pic-14.png" alt="上暉食品" />
+            <NuxtImg format="webp" src="/overView/0-pic-14.png" alt="上暉食品" />
           </div>
           <div class="image-content">
-            <img src="/overView/0-pic-8.jpg" alt="食品製造業" s />
+            <NuxtImg format="webp" src="/overView/0-pic-8.jpg" alt="食品製造業" s />
           </div>
         </q-card>
         <!-- 3 -->
@@ -270,12 +270,12 @@
 
             <br />
             <div class="row">
-              <!-- <img src="/overView/0-pic-14.png" alt="上暉食品" > -->
-              <img src="/overView/0-pic-15.png" alt="香臨食品" />
+              <!-- <NuxtImg format="webp" src="/overView/0-pic-14.png" alt="上暉食品" > -->
+              <NuxtImg format="webp" src="/overView/0-pic-15.png" alt="香臨食品" />
             </div>
           </div>
           <div class="image-content">
-            <img src="/overView/0-pic-9.jpg" alt="水酒事業" />
+            <NuxtImg format="webp" src="/overView/0-pic-9.jpg" alt="水酒事業" />
           </div>
         </q-card>
         <!-- 4 -->
@@ -294,10 +294,10 @@
             <p>Media Studio</p>
 
             <br />
-            <img src="/overView/0-pic-16.png" alt="福汎國際" />
+            <NuxtImg format="webp" src="/overView/0-pic-16.png" alt="福汎國際" />
           </div>
           <div class="image-content">
-            <img src="/overView/0-pic-10.jpg" alt="影視事業" />
+            <NuxtImg format="webp" src="/overView/0-pic-10.jpg" alt="影視事業" />
           </div>
         </q-card>
 
@@ -317,10 +317,10 @@
             <p>Decoration Engineering Business</p>
 
             <br />
-            <img src="/overView/0-pic-18.png" alt="家荷工程)" />
+            <NuxtImg format="webp" src="/overView/0-pic-18.png" alt="家荷工程)" />
           </div>
           <div class="image-content">
-            <img src="/overView/0-pic-12.jpg" alt="裝修工程事業" />
+            <NuxtImg format="webp" src="/overView/0-pic-12.jpg" alt="裝修工程事業" />
           </div>
         </q-card>
       </div>
@@ -350,7 +350,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: '/indexpic/0-pic-13.png' // 使用你的圖片路徑
+      content: 'https://www.dtstw.com/recruit/ogImage.png' // 使用你的圖片路徑
     },
     {
       property: 'og:image:alt',

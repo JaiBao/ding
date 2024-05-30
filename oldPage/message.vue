@@ -127,7 +127,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: '/indexpic/0-pic-13.png' // 使用你的圖片路徑
+      content: 'https://www.dtstw.com/recruit/ogImage.png' // 使用你的圖片路徑
     },
     {
       property: 'og:image:alt',

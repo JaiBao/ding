@@ -35,30 +35,30 @@
       <hr class="hrShort" />
       <div class="row center-align">
         <div class="col-4 column justify-center items-center col-md-2">
-          <img ref="icon2" src="/social/4-pic-2.png" />
+          <NuxtImg format="webp" ref="icon2" src="/social/4-pic-2.png" />
           <p>親子關懷</p>
         </div>
         <div class="col-4 column justify-center items-center col-md-2">
-          <img ref="icon3" src="/social/4-pic-3.png" />
+          <NuxtImg format="webp" ref="icon3" src="/social/4-pic-3.png" />
           <p>醫護支持</p>
         </div>
         <div class="col-4 column justify-center items-center col-md-2">
-          <img ref="icon4" src="/social/4-pic-4.png" />
+          <NuxtImg format="webp" ref="icon4" src="/social/4-pic-4.png" />
           <p>教育推動</p>
         </div>
         <div class="col-4 column justify-center items-center col-md-2">
-          <img ref="icon5" src="/social/4-pic-5.png" />
+          <NuxtImg format="webp" ref="icon5" src="/social/4-pic-5.png" />
           <p>體育贊助</p>
         </div>
         <div class="col-4 column justify-center items-center col-md-2">
-          <img ref="icon6" src="/social/4-pic-6.png" />
+          <NuxtImg format="webp" ref="icon6" src="/social/4-pic-6.png" />
           <p>藝文推廣</p>
         </div>
       </div>
     </div>
     <!-- 卡片1 -->
     <q-card class="card03 row">
-      <img src="/social/4-pic-7.jpg" class="col-12 col-md-5" />
+      <NuxtImg format="webp" src="/social/4-pic-7.jpg" class="col-12 col-md-5" />
 
       <q-card-section class="col-12 col-md-7 card03Text bg-red text-white">
         <h2>
@@ -79,19 +79,19 @@
           2020年 協辦「防疫新生活 親子童樂趣」活動
         </p>
       </q-card-section>
-      <img src="/social/4-pic-9.jpg" class="col-12 col-md-4" />
-      <img src="/social/4-pic-10.jpg" class="col-12 col-md-3" />
-      <img src="/social/4-pic-11.jpg" class="col-12 col-md-5" />
+      <NuxtImg format="webp" src="/social/4-pic-9.jpg" class="col-12 col-md-4" />
+      <NuxtImg format="webp" src="/social/4-pic-10.jpg" class="col-12 col-md-3" />
+      <NuxtImg format="webp" src="/social/4-pic-11.jpg" class="col-12 col-md-5" />
     </q-card>
     <!-- icon圖 -->
     <div class="socialImage q-ma-md">
       <hr class="hrShort" />
       <div class="row center-align">
         <!-- <div class="col-6">
-    <img src="/social/1.jpg">
+    <NuxtImg format="webp" src="/social/1.jpg">
   </div> -->
         <div class="col-8 column justify-center items-center col-md-10">
-          <img ref="icon1" src="/social/4-pic-12.png" />
+          <NuxtImg format="webp" ref="icon1" src="/social/4-pic-12.png" />
           <p>安心食品責任</p>
         </div>
       </div>
@@ -99,7 +99,7 @@
     <!-- 圖片 -->
     <q-card class="row socialSolo">
       <div class="socialCardImg col-md-6 col-12">
-        <img src="/social/4-pic-13.jpg" alt="活動" />
+        <NuxtImg format="webp" src="/social/4-pic-13.jpg" alt="活動" />
       </div>
       <div class="socialCardText col-md-6 col-12">
         <h4>灌溉養份的種子 用良心做事、為社會奉獻！</h4>
@@ -120,11 +120,11 @@
           <p>集團秉持源頭管控的作法把關食品安全，從原物遴選到中央廚房製作，嚴格遵循食品安全SOP流程作業。落實源頭管理，將風險降低，做好食品安全管理才能提供安心產品。</p>
         </div>
         <div class="card04TextImg row">
-          <img src="/social/4-pic-15.jpg" class="col-6 col-md-6" />
-          <img src="/social/4-pic-16.jpg" class="col-6 col-md-6" />
+          <NuxtImg format="webp" src="/social/4-pic-15.jpg" class="col-6 col-md-6" />
+          <NuxtImg format="webp" src="/social/4-pic-16.jpg" class="col-6 col-md-6" />
         </div>
       </q-card-section>
-      <img src="/social/4-pic-17.jpg" class="col-12 col-md-4" />
+      <NuxtImg format="webp" src="/social/4-pic-17.jpg" class="col-12 col-md-4" />
     </q-card>
   </q-page>
 </template>
@@ -153,7 +153,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: '/indexpic/0-pic-13.png' // 使用你的圖片路徑
+      content: 'https://www.dtstw.com/recruit/ogImage.png' // 使用你的圖片路徑
     },
     {
       property: 'og:image:alt',

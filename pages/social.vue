@@ -7,8 +7,8 @@
         <div class="socialContainerTitle">
           <h4>灌溉養份的種子用良心做事</h4>
           <h4>為社會奉獻！</h4>
-          <img src="/test/paper-web.png" class="gt-sm" />
-          <img src="/test/paper-App.png" class="lt-md" />
+          <NuxtImg format="webp" src="/test/paper-web.png" class="gt-sm" />
+          <NuxtImg format="webp" src="/test/paper-App.png" class="lt-md" />
         </div>
       </div>
       <!-- 文章欄位 -->
@@ -22,23 +22,23 @@
         <div class="socialImage">
           <div class="row center-align">
             <div class="col-2 column justify-center items-center col-md-2">
-              <img ref="icon2" src="/social/4-pic-2.png" />
+              <NuxtImg format="webp" ref="icon2" src="/social/4-pic-2.png" />
               <p>親子關懷</p>
             </div>
             <div class="col-2 column justify-center items-center col-md-2">
-              <img ref="icon3" src="/social/4-pic-3.png" />
+              <NuxtImg format="webp" ref="icon3" src="/social/4-pic-3.png" />
               <p>醫護支持</p>
             </div>
             <div class="col-2 column justify-center items-center col-md-2">
-              <img ref="icon4" src="/social/4-pic-4.png" />
+              <NuxtImg format="webp" ref="icon4" src="/social/4-pic-4.png" />
               <p>教育推動</p>
             </div>
             <div class="col-2 column justify-center items-center col-md-2">
-              <img ref="icon5" src="/social/4-pic-5.png" />
+              <NuxtImg format="webp" ref="icon5" src="/social/4-pic-5.png" />
               <p>體育贊助</p>
             </div>
             <div class="col-2 column justify-center items-center col-md-2">
-              <img ref="icon6" src="/social/4-pic-6.png" />
+              <NuxtImg format="webp" ref="icon6" src="/social/4-pic-6.png" />
               <p>藝文推廣</p>
             </div>
           </div>
@@ -77,7 +77,7 @@
             </q-list>
           </div>
 
-          <img :src="currentImage" v-if="currentImage" />
+          <NuxtImg format="webp" :src="currentImage" v-if="currentImage" />
         </div>
       </div>
     </div>
@@ -89,9 +89,9 @@
         <p>落實源頭管理，將風險降低，做好食品安全管理才能提供安心產品。</p>
       </div>
       <div class="sectionImg">
-        <img src="/social/4-pic-15.png" />
-        <img src="/social/4-pic-16.png" />
-        <img src="/social/4-pic-17.png" />
+        <NuxtImg format="webp" src="/social/4-pic-15.png" />
+        <NuxtImg format="webp" src="/social/4-pic-16.png" />
+        <NuxtImg format="webp" src="/social/4-pic-17.png" />
       </div>
     </div>
   </q-page>
@@ -121,7 +121,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: '/indexpic/0-pic-13.png' // 使用你的圖片路徑
+      content: 'https://www.dtstw.com/recruit/ogImage.png' // 使用你的圖片路徑
     },
     {
       property: 'og:image:alt',
@@ -154,10 +154,17 @@ const icon6 = ref(null)
 
 const items = ref([
   {
+    id: 'img6',
+    year: '2024',
+    label: '贊助小小網紅大夢想 第二屆短片選拔活動',
+    checked: true,
+    images: ['/social/4-pic-21.png', '/social/4-pic-20.png', '/social/4-pic-19.png']
+  },
+  {
     id: 'img1',
     year: '2023',
     label: '中秋禮盒支持蒙恩聽障烘焙坊',
-    checked: true,
+    checked: false,
     images: ['/social/4-pic-7a.png', '/social/4-pic-7b.png', '/social/4-pic-7c.png', '/social/4-pic-7d.png', '/social/4-pic-7e.png']
   },
   { id: 'img2', year: '2023', label: '贊助捐血活動', checked: false, images: ['/social/4-pic-9a.png'] },
@@ -179,7 +186,7 @@ const items = ref([
   // { id: 'img6', year: '1998', label: '黑白講', checked: false, images: ['/social/4-pic-7.png', '/social/4-pic-9.png', '/social/4-pic-10.png'] }
   // 添加更多選項...
 ])
-const itemsPerPage = 5
+const itemsPerPage = 6
 const showAll = ref(false)
 const currentPage = ref(1)
 const maxPages = computed(() => Math.ceil(items.value.length / itemsPerPage))

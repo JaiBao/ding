@@ -19,7 +19,7 @@
   <div class="businessCard">
   <div class="businessCard1 ">
   <q-card class="col col-md-2">
-    <img src="/business/3-pic-2.jpg" class="businessImage" />
+    <NuxtImg format="webp" src="/business/3-pic-2.jpg" class="businessImage" />
     <div class="businessText">
       飲用水事業
     </div>
@@ -28,7 +28,7 @@
 </div>
   <div class="businessCard1 ">
   <q-card class="col col-md-2">
-    <img src="/business/3-pic-3.jpg" class="businessImage" />
+    <NuxtImg format="webp" src="/business/3-pic-3.jpg" class="businessImage" />
     <div class="businessText">
       生技事業
     </div>
@@ -36,7 +36,7 @@
   <q-btn class="businessBtn">京妍國際股份有限公司</q-btn></div>
   <div class="businessCard1 ">
   <q-card class="col col-md-2">
-    <img src="/business/3-pic-4.jpg" class="businessImage" />
+    <NuxtImg format="webp" src="/business/3-pic-4.jpg" class="businessImage" />
     <div class="businessText">
       餐飲事業
     </div>
@@ -46,7 +46,7 @@
 </div>
   <div class="businessCard1 ">
   <q-card class="col col-md-2">
-    <img src="/business/3-pic-5.jpg" class="businessImage" />
+    <NuxtImg format="webp" src="/business/3-pic-5.jpg" class="businessImage" />
     <div class="businessText">
       影視事業
     </div>
@@ -54,7 +54,7 @@
   <q-btn class="businessBtn">福汎國際有限公司</q-btn></div>
   <div class="businessCard1 ">
   <q-card class="col col-md-2">
-    <img src="/business/3-pic-6.jpg" class="businessImage" />
+    <NuxtImg format="webp" src="/business/3-pic-6.jpg" class="businessImage" />
     <div class="businessText">
       水酒事業
     </div>
@@ -64,7 +64,7 @@
 </div>
   <div class="businessCard1 ">
   <q-card class="col col-md-2">
-    <img src="/business/3-pic-7.jpg" class="businessImage" />
+    <NuxtImg format="webp" src="/business/3-pic-7.jpg" class="businessImage" />
     <div class="businessText">
       裝修工程事業
     </div>
@@ -78,7 +78,7 @@
     <div v-for="card in businessPageCards" :key="card.id" class="q-ma-md row justify-center">
       <q-card class="businessPageCard">
         <q-card-section class="gutter-xs q-gutter-xl businessPageCard2" horizontal>
-          <img :src="card.image" class="col-12 col-md-4 newsPageImg" />
+          <NuxtImg format="webp" :src="card.image" class="col-12 col-md-4 newsPageImg" />
           <div class="col-12 col-md-8 newsPageText">
             <div class="businessPageTitle">
               {{ card.businessType }}
@@ -96,9 +96,9 @@
     </div>
     <!-- 農夫 -->
     <div class="row footerImg">
-      <!-- <img src="/business/3-pic-10.png" alt="背景"  class="footerImg1"> -->
+      <!-- <NuxtImg format="webp" src="/business/3-pic-10.png" alt="背景"  class="footerImg1"> -->
       <div class="row footerImg2">
-        <img src="/business/3-pic-9.png" alt="農夫" />
+        <NuxtImg format="webp" src="/business/3-pic-9.png" alt="農夫" />
         <div class="footerBText">
           <p>
             市場共創
@@ -138,7 +138,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: '/indexpic/0-pic-13.png' // 使用你的圖片路徑
+      content: 'https://www.dtstw.com/recruit/ogImage.png' // 使用你的圖片路徑
     },
     {
       property: 'og:image:alt',

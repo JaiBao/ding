@@ -3,7 +3,7 @@
     <!-- banner -->
 
     <div class="full-width">
-      <img src="/business/businessBanner.png" />
+      <NuxtImg format="webp" src="/business/businessBanner.png" />
     </div>
     <!-- content -->
     <div class="businessArea">
@@ -15,7 +15,7 @@
             @click="selectIcon(icon)"
             @mouseover="hoverIcon(icon)"
             @mouseout="unhoverIcon(icon)">
-            <img :src="currentIcon(icon)" :alt="icon.title" />
+            <NuxtImg format="webp" :src="currentIcon(icon)" :alt="icon.title" />
             <span class="overlayText" v-if="selectedIcon.id !== icon.id && hoverState !== icon.id">
               {{ icon.note }}
               <br />
@@ -42,7 +42,7 @@
           </button>
         </div>
         <!-- 假設每一個 icon 都有一張相對應的圖片 -->
-        <div class="businessContentImg"><img :src="selectedIcon.img" /></div>
+        <div class="businessContentImg"><NuxtImg format="webp" :src="selectedIcon.img" /></div>
         <div class="appBtn">
           <button class="isButton xs" :class="{ 'disabled-button': !selectedIcon.link }" @click="goToLink(selectedIcon.link)" :disabled="!selectedIcon.link">
             前往官網
@@ -79,7 +79,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: '/indexpic/0-pic-13.png' // 使用你的圖片路徑
+      content: 'https://www.dtstw.com/recruit/ogImage.png' // 使用你的圖片路徑
     },
     {
       property: 'og:image:alt',

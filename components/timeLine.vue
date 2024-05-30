@@ -9,7 +9,7 @@
             <div class="avatars-text row">
               <div class="avatars column">
                 <q-avatar v-if="text.image" >
-                  <img :src="text.image" >
+                  <NuxtImg format="webp" :src="text.image" >
                 </q-avatar>
               </div>
               <div class="text-content column">

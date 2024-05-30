@@ -2,9 +2,9 @@
   <q-page>
     <!-- 大圖 -->
     <div class="visionFirst">
-      <img src="/vision2/1-3-pic-1.jpg" />
+      <NuxtImg format="webp" src="/vision2/1-3-pic-1.jpg" />
       <div class="visionLogo">
-        <img src="/vision2/1-3-pic-2.png" alt="logo" />
+        <NuxtImg format="webp" src="/vision2/1-3-pic-2.png" alt="logo" />
       </div>
       <div class="visionCaption">
         <div class="text-white">
@@ -85,7 +85,7 @@
       </div>
       <div class="core2Card1">
         <q-card class="market">
-          <img src="/vision2/1-3-pic-3.png" alt="" />
+          <NuxtImg format="webp" src="/vision2/1-3-pic-3.png" alt="" />
           <div class="core2Card1Text">
             <h5>市場共創</h5>
             <h4>Market Co-creation</h4>
@@ -94,7 +94,7 @@
       </div>
       <div class="core2Card2">
         <q-card class="profit">
-          <img src="/vision2/1-3-pic-4.png" alt="" />
+          <NuxtImg format="webp" src="/vision2/1-3-pic-4.png" alt="" />
           <div class="core2Card1Text">
             <h5>利潤共享</h5>
             <h4>Profit Sharing</h4>
@@ -103,7 +103,7 @@
       </div>
       <div class="core2Card3">
         <q-card class="resource">
-          <img src="/vision2/1-3-pic-5.png" alt="" />
+          <NuxtImg format="webp" src="/vision2/1-3-pic-5.png" alt="" />
           <div class="core2Card1Text">
             <h5>資源共有</h5>
             <h4>Resource Sharing</h4>
@@ -111,9 +111,9 @@
         </q-card>
       </div>
       <div class="core2Map">
-        <img src="/vision2/1-3-pic-6.png" alt="地圖" style="width: 100%" />
+        <NuxtImg format="webp" src="/vision2/1-3-pic-6.png" alt="地圖" style="width: 100%" />
         <!-- <div class="mapLocal">
-<img src="/vision2/1-3-pic-6b.png" alt="">
+<NuxtImg format="webp" src="/vision2/1-3-pic-6b.png" alt="">
 </div> -->
 
         <h3>"成為台灣最具影響力的連鎖集團總部，業務拓展至國際市場"</h3>
@@ -125,11 +125,11 @@
     <div class="core3">
       <div class="handsome">
         <div class="core3Img">
-          <!-- <img src="/vision2/1-3-pic-7.png" alt="執行長" > -->
+          <!-- <NuxtImg format="webp" src="/vision2/1-3-pic-7.png" alt="執行長" > -->
         </div>
         <!-- <div class="name">
     <h5>執行長的話</h5> -->
-        <!-- <img src="/vision2/1-3-pic-8.png" alt="執行長名稱" > -->
+        <!-- <NuxtImg format="webp" src="/vision2/1-3-pic-8.png" alt="執行長名稱" > -->
         <!-- </div> -->
       </div>
       <div class="core3Text">
@@ -180,7 +180,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: '/indexpic/0-pic-13.png' // 使用你的圖片路徑
+      content: 'https://www.dtstw.com/recruit/ogImage.png' // 使用你的圖片路徑
     },
     {
       property: 'og:image:alt',

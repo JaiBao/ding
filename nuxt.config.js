@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     ]
   },
   devtools: { enabled: true },
-  modules: ['nuxt-quasar-ui', 'nuxt-simple-sitemap'],
+  modules: ['nuxt-quasar-ui', 'nuxt-simple-sitemap', '@nuxt/image'],
   css: ['~/assets/global.scss'],
 
   quasar: {

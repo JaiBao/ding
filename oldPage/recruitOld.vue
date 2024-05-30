@@ -13,7 +13,7 @@
     <!-- 卡片第一層 -->
 
     <q-card data-aos="fade-up" data-aos-duration="2000" class="jobCard01 row" style="max-width: 100%; max-height: 100%; object-fit: contain">
-      <img src="/recruit/5-pic-2l.jpg" class="col-12 col-md-6" style="max-width: 100%; max-height: 100%; object-fit: contain" />
+      <NuxtImg format="webp" src="/recruit/5-pic-2l.jpg" class="col-12 col-md-6" style="max-width: 100%; max-height: 100%; object-fit: contain" />
 
       <q-card-section class="col-12 col-md-6 jobText bg-white text-grey">
         <p>
@@ -47,7 +47,7 @@
               <i class="fa-solid fa-circle-arrow-right fa-bounce" style="color: white"></i>
             </q-btn>
           </div>
-          <img src="/recruit/5-pic-3.jpg" alt="高階主管" />
+          <NuxtImg format="webp" src="/recruit/5-pic-3.jpg" alt="高階主管" />
         </div>
       </q-card>
       <div class="col col-md-12 col-sm-12 row jobGroup">
@@ -62,7 +62,7 @@
                 <i class="fa-solid fa-circle-arrow-right fa-bounce" style="color: white"></i>
               </q-btn>
             </div>
-            <img src="/recruit/5-pic-4.jpg" alt="裝修工程事業" />
+            <NuxtImg format="webp" src="/recruit/5-pic-4.jpg" alt="裝修工程事業" />
           </div>
         </q-card>
         <q-card class="col-md-6 col-sm-12">
@@ -76,7 +76,7 @@
                 <i class="fa-solid fa-circle-arrow-right fa-bounce" style="color: white"></i>
               </q-btn>
             </div>
-            <img src="/recruit/5-pic-5.jpg" alt="影視創意事業" />
+            <NuxtImg format="webp" src="/recruit/5-pic-5.jpg" alt="影視創意事業" />
           </div>
         </q-card>
       </div>
@@ -91,61 +91,61 @@
         <div class="jobIconArea row">
           <div class="iconLeft col-6">
             <div class="jobIcon">
-              <img src="/recruit/5-pic-6.png" alt="勞保健保" />
+              <NuxtImg format="webp" src="/recruit/5-pic-6.png" alt="勞保健保" />
               <p>勞保健保</p>
             </div>
             <div class="jobIcon">
-              <img src="/recruit/5-pic-7.png" alt="勞退提撥金" />
+              <NuxtImg format="webp" src="/recruit/5-pic-7.png" alt="勞退提撥金" />
               <p>勞退提撥金</p>
             </div>
             <div class="jobIcon">
-              <img src="/recruit/5-pic-8.png" alt="就業保險" />
+              <NuxtImg format="webp" src="/recruit/5-pic-8.png" alt="就業保險" />
               <p>就業保險</p>
             </div>
             <div class="jobIcon">
-              <img src="/recruit/5-pic-9.png" alt="職災保險" />
+              <NuxtImg format="webp" src="/recruit/5-pic-9.png" alt="職災保險" />
               <p>職災保險</p>
             </div>
             <div class="jobIcon">
-              <img src="/recruit/5-pic-10.png" alt="員工團體保險" />
+              <NuxtImg format="webp" src="/recruit/5-pic-10.png" alt="員工團體保險" />
               <p>員工團體保險</p>
             </div>
             <div class="jobIcon">
-              <img src="/recruit/5-pic-11.png" alt="三節獎金禮品" />
+              <NuxtImg format="webp" src="/recruit/5-pic-11.png" alt="三節獎金禮品" />
               <p>三節獎金禮品</p>
             </div>
             <div class="jobIcon">
-              <img src="/recruit/5-pic-12.png" alt="特殊節日獎金禮品" />
+              <NuxtImg format="webp" src="/recruit/5-pic-12.png" alt="特殊節日獎金禮品" />
               <p>特殊節日獎金禮品</p>
             </div>
           </div>
           <div class="iconRight col-6">
             <div class="jobIcon">
-              <img src="/recruit/5-pic-13.png" alt="勞保健保" />
+              <NuxtImg format="webp" src="/recruit/5-pic-13.png" alt="勞保健保" />
               <p>咖啡吧</p>
             </div>
             <div class="jobIcon">
-              <img src="/recruit/5-pic-14.png" alt="旅遊補助" />
+              <NuxtImg format="webp" src="/recruit/5-pic-14.png" alt="旅遊補助" />
               <p>旅遊補助</p>
             </div>
             <div class="jobIcon">
-              <img src="/recruit/5-pic-15.png" alt="免費下午茶" />
+              <NuxtImg format="webp" src="/recruit/5-pic-15.png" alt="免費下午茶" />
               <p>免費下午茶</p>
             </div>
             <div class="jobIcon">
-              <img src="/recruit/5-pic-16.png" alt="伙食津貼" />
+              <NuxtImg format="webp" src="/recruit/5-pic-16.png" alt="伙食津貼" />
               <p>伙食津貼</p>
             </div>
             <div class="jobIcon">
-              <img src="/recruit/5-pic-17.png" alt="員購優惠" />
+              <NuxtImg format="webp" src="/recruit/5-pic-17.png" alt="員購優惠" />
               <p>員購優惠</p>
             </div>
             <div class="jobIcon">
-              <img src="/recruit/5-pic-18.png" alt="員工制服" />
+              <NuxtImg format="webp" src="/recruit/5-pic-18.png" alt="員工制服" />
               <p>員工制服</p>
             </div>
             <div class="jobIcon">
-              <img src="/recruit/5-pic-19.png" alt="員工餐" />
+              <NuxtImg format="webp" src="/recruit/5-pic-19.png" alt="員工餐" />
               <p>員工餐</p>
             </div>
           </div>
@@ -158,13 +158,13 @@
         <div class="jobIconArea row">
           <div class="iconLeft">
             <div class="jobIcon col-6">
-              <img src="/recruit/5-pic-20.png" alt="員工教育訓練" />
+              <NuxtImg format="webp" src="/recruit/5-pic-20.png" alt="員工教育訓練" />
               <p>員工教育訓練</p>
             </div>
           </div>
           <div class="iconRight col-6">
             <div class="jobIcon">
-              <img src="/recruit/5-pic-21.png" alt="培訓課程" />
+              <NuxtImg format="webp" src="/recruit/5-pic-21.png" alt="培訓課程" />
               <p>培訓課程</p>
             </div>
           </div>
@@ -199,7 +199,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: '/indexpic/0-pic-13.png' // 使用你的圖片路徑
+      content: 'https://www.dtstw.com/recruit/ogImage.png' // 使用你的圖片路徑
     },
     {
       property: 'og:image:alt',

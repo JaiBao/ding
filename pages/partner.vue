@@ -2,7 +2,7 @@
   <q-page>
     <!-- banner -->
     <div class="full-width businessSection1">
-      <img class="section1Img" src="/business/businessBanner.png" />
+      <NuxtImg format="webp" class="section1Img" src="/business/businessBanner.png" />
       <div class="section1Title">
         <div class="titleContent">
           <h2>Business</h2>
@@ -21,7 +21,7 @@
             @click="selectIcon(icon)"
             @mouseover="hoverIcon(icon)"
             @mouseout="unhoverIcon(icon)">
-            <img :src="currentIcon(icon)" :alt="icon.title" />
+            <NuxtImg format="webp" :src="currentIcon(icon)" :alt="icon.title" />
             <span class="overlayText" v-if="selectedIcon.id !== icon.id && hoverState !== icon.id">
               {{ icon.note }}
               <br />
@@ -39,7 +39,7 @@
               :class="{ selected: selectedIcon.id === icon.id, hover: hoverState === icon.id }"
               @click="selectIcon(icon)"
               @mouseout="unhoverIcon(icon)">
-              <img :src="currentIcon(icon)" :alt="icon.title" />
+              <NuxtImg format="webp" :src="currentIcon(icon)" :alt="icon.title" />
               <span class="overlayText" v-if="selectedIcon.id !== icon.id && hoverState !== icon.id">
                 {{ icon.note }}
                 <br />
@@ -73,7 +73,7 @@
           </button>
         </div>
         <!-- 假設每一個 icon 都有一張相對應的圖片 -->
-        <div class="businessContentImg"><img :src="selectedIcon.img" /></div>
+        <div class="businessContentImg"><NuxtImg format="webp" :src="selectedIcon.img" /></div>
         <div class="appBtn">
           <button class="isButton xs" :class="{ 'disabled-button': !selectedIcon.link }" @click="goToLink(selectedIcon.link)" :disabled="!selectedIcon.link">
             前往官網
@@ -118,7 +118,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: '/indexpic/0-pic-13.png' // 使用你的圖片路徑
+      content: 'https://www.dtstw.com/recruit/ogImage.png' // 使用你的圖片路徑
     },
     {
       property: 'og:image:alt',
@@ -230,7 +230,7 @@ const iconsData = [
     content:
       '福汎FORFAM跳脫框架、不只是影像團隊，創意是福汎核心宗旨，有創意才能把影像作品帶入生命力。沒有創意的影片就像是沒有靈魂的軀殼。福汎作品不僅有鮮明的辨識度，獨創性的影視作品，豐富了影像、廣告、音樂MV等作品。',
     img: '/business/forfamImg.png',
-    link: 'https://www.instagram.com/staysolid4fam'
+    link: 'https://www.forfamworld.com/'
   },
   {
     id: 'home',
@@ -271,7 +271,7 @@ const currentIcon = icon => {
   return icon.src
 }
 
-const autoChangeInterval = 30000 // 間隔時間
+const autoChangeInterval = 20000 // 間隔時間
 let autoChangeTimer
 
 // 自動更換icon

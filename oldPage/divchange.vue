@@ -8,7 +8,7 @@
       ref="stickyDiv">
       <!-- 使用q-avatar顯示圖像，並動態改變邊框顏色 -->
 
-      <img :src="currentImage" alt="scroll" class="containedImage" />
+      <NuxtImg format="webp" :src="currentImage" alt="scroll" class="containedImage" />
     </div>
   </div>
 </template>

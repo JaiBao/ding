@@ -36,7 +36,7 @@
       <div v-for="card in currentPageCards" :key="card.id" class="q-ma-md row justify-center" data-aos="fade-up" data-aos-duration="2000">
         <q-card class="newsPageCard">
           <q-card-section class="newsPageCard2" horizontal>
-            <img :src="card.image" class="col-12 col-md-4 newsPageImg" />
+            <NuxtImg format="webp" :src="card.image" class="col-12 col-md-4 newsPageImg" />
             <div class="col-12 col-md-8 newsPageText">
               <div class="newsTime">{{ card.time }}</div>
               <div class="newsTitle">{{ card.businessType }} | {{ card.title }}</div>
@@ -144,7 +144,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: '/indexpic/0-pic-13.png' // 使用你的圖片路徑
+      content: 'https://www.dtstw.com/recruit/ogImage.png' // 使用你的圖片路徑
     },
     {
       property: 'og:image:alt',

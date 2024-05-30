@@ -24,7 +24,7 @@
         class="chronicleTimeline">
         <div v-for="(text, index) in chronicle.texts" :key="index" class="avatarContent">
           <q-avatar v-if="text.image" class="bounce-in">
-            <img :src="text.image" />
+            <NuxtImg format="webp" :src="text.image" />
           </q-avatar>
 
           <h5 class="avatarH5">
@@ -70,7 +70,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: '/indexpic/0-pic-13.png' // 使用你的圖片路徑
+      content: 'https://www.dtstw.com/recruit/ogImage.png' // 使用你的圖片路徑
     },
     {
       property: 'og:image:alt',

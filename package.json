@@ -22,6 +22,7 @@
     "@fullcalendar/interaction": "^5.11.0",
     "@fullcalendar/timegrid": "^5.11.0",
     "@fullcalendar/vue3": "^5.11.1",
+    "@nuxt/image": "^1.1.0",
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/robots": "^3.0.0",
     "@quasar/extras": "^1.16.5",

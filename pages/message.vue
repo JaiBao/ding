@@ -3,7 +3,7 @@
     <!-- 大圖視差 -->
     <!-- 大圖視差 -->
     <div class="full-width recruitSection1">
-      <img class="section1Img" src="/message/6-pic-1.jpg" />
+      <NuxtImg format="webp" class="section1Img" src="/message/6-pic-1.jpg" />
       <div class="section1Title">
         <div class="titleContent">
           <h2>聯絡我們</h2>
@@ -144,7 +144,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: '/indexpic/0-pic-13.png' // 使用你的圖片路徑
+      content: 'https://www.dtstw.com/recruit/ogImage.png' // 使用你的圖片路徑
     },
     {
       property: 'og:image:alt',
