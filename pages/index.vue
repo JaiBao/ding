@@ -41,6 +41,14 @@
         </div>
       </q-card>
     </div>
+
+    <div class="videoArea">
+      <!-- 影片 -->
+      <video id="player" playsinline controls preload="auto" data-poster="/overView/0-pic-1.jpg" v-plyr="playerOptions">
+        <source src="/indexpic/fontMovie.mp4" type="video/mp4" />
+      </video>
+    </div>
+
     <!-- 卡片第二層 -->
     <div class="group row">
       <q-card class="news col-md-4 col-12 cardGroup">
@@ -432,6 +440,66 @@ useHead({
   ]
 })
 
+const playerOptions = {
+  controls: [
+    'play-large',
+    'restart',
+    // 'rewind',
+    'play',
+    // 'fast-forward',
+    'progress',
+    'current-time',
+    'duration',
+    'mute',
+    'volume',
+    'captions',
+    'settings',
+    'pip',
+    'airplay',
+    // 'download',
+    'fullscreen'
+  ],
+  i18n: {
+    restart: '重播',
+    rewind: '倒帶 {seektime} 秒',
+    fastForward: '快轉 {seektime} 秒',
+    play: '播放',
+    pause: '暫停',
+    seek: '尋找',
+    played: '已播放',
+    buffered: '緩衝',
+    currentTime: '目前時間',
+    duration: '總共時間',
+    volume: '音量',
+    mute: '靜音',
+    unmute: '取消靜音',
+    captions: '內嵌字幕',
+    enableCaptions: '開啟內嵌字幕',
+    disableCaptions: '關閉內嵌字幕',
+    enterFullscreen: '全螢幕',
+    exitFullscreen: '退出全螢幕',
+    frameTitle: '{title} 播放器',
+    settings: '設定',
+    speed: '播放速率',
+    normal: '一般',
+    quality: '畫質',
+    loop: '循環播放',
+    start: '開始',
+    end: '結束',
+    all: '全部',
+    reset: '重置',
+    disabled: '關閉',
+    advertisement: '廣告'
+  },
+  markers: {
+    enabled: false,
+    points: [
+      { time: 28, label: '香臨食品' }
+      // { time: 20, label: '段落標記 Demo2' },
+      // { time: 30, label: '段落標記之 <strong>可以用粗體字</strong>' }
+    ]
+  }
+}
 const cardRefs = {
   card1: ref(null),
   card2: ref(null),
@@ -1271,6 +1339,16 @@ const formatNumber = number => {
       width: 40%;
       object-fit: contain;
     }
+  }
+}
+.videoArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 10vw 4% 10vw; /* 保持左右邊距 */
+  #player {
+    width: 100%;
   }
 }
 </style>

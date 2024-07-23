@@ -20,8 +20,8 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   modules: ['nuxt-quasar-ui', 'nuxt-simple-sitemap', '@nuxt/image'],
-  css: ['~/assets/global.scss'],
-
+  css: ['plyr/dist/plyr.css', '~/assets/global.scss'],
+  plugins: [{ src: '~/plugins/plyr.client.js', mode: 'client' }],
   quasar: {
     plugins: ['Notify']
   },
